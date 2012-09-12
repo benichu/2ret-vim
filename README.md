@@ -81,8 +81,9 @@ Here's some tips if you've never used VIM before:
 
 ### Keyboard cheat sheet
 
-![vim cheat sheet image][vim-key-mapping-img]
 [source cheat sheet](http://walking-without-crutches.heroku.com/image/images/vi-vim-cheat-sheet.png)
+
+![vim cheat sheet image][vim-key-mapping-img]
 
 # CREDITS
 
