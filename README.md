@@ -62,6 +62,7 @@ Here's some tips if you've never used VIM before:
 * Type `vimtutor` into a shell to go through a brief interactive
   tutorial inside VIM.
 * Read the slides at [VIM: Walking Without Crutches](http://walking-without-crutches.heroku.com/#1).
+* [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)
 
 ## Modes
 
@@ -103,4 +104,4 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 [Matchit]:http://www.vim.org/scripts/script.php?script_id=39
 [Tabularize]:http://github.com/godlygeek/tabular
 
-[vim-key-mapping-img]:http://i.imgur.com/ABUHq.png
+[vim-key-mapping-imgvim-key-mapping-img]:http://i.imgur.com/DZwFZ.png
