@@ -104,4 +104,4 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 [Matchit]:http://www.vim.org/scripts/script.php?script_id=39
 [Tabularize]:http://github.com/godlygeek/tabular
 
-[vim-key-mapping-imgvim-key-mapping-img]:http://i.imgur.com/DZwFZ.png
+[vim-key-mapping-img]:http://i.imgur.com/DZwFZ.png
