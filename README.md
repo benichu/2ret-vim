@@ -11,9 +11,20 @@
 
 2ret-vim is a distribution of vim plugins and resources for Vim, Gvim and [MacVim].
 
-The distribution is completely customisable using a `~/.vimrc.local` and `~/.vimrc.bundles.local` Vim RC files.
+The distribution is completely customisable using a `~/.vimrc.local`
+and `~/.vimrc.bundles.local` Vim RC files.
 
 # INSTALLATION (Linux, *nix, Mac OSX Installation)
+
+The easiest way to install 2ret-vim is to use our [automatic installer](http://2ret.com/vim)
+by simply copying and pasting the following line into a terminal.
+This will install 2ret-vim and backup your existing vim configuration.
+
+```bash
+
+    curl http://2ret.com/vim -L -o - | sh
+
+```
 
 ## Updating to the latest version
 
@@ -49,9 +60,15 @@ Here are a few of the plugins:
 
 ## [Fugitive]
 
-## Ack.vim
+## [Ack.vim]
 
 ## [Tagbar]
+
+## [ZoomWin]
+
+## [Ctrlp.vim]
+
+## [Gundo]
 
 # Intro to VIM
 
@@ -105,5 +122,9 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 [Syntastic]:http://github.com/scrooloose/syntastic
 [Matchit]:http://www.vim.org/scripts/script.php?script_id=39
 [Tabularize]:http://github.com/godlygeek/tabular
+[Ack.vim]:https://github.com/mileszs/ack.vim
+[ZoomWin]:https://github.com/vim-scripts/ZoomWin
+[Ctrlp.vim]:https://github.com/kien/ctrlp.vim.git
+[Gundo]:https://github.com/sjl/gundo.vim
 
 [vim-key-mapping-img]:http://i.imgur.com/hP67T.png
