@@ -77,7 +77,8 @@ Here's some tips if you've never used VIM before:
 * Certain commands are prefixed with a `<Leader>` key, which by default maps to `\`.
   2ret-vim uses `let mapleader = ","` to change this to `,` which is in a consistent and
   convenient location.
-* Keyboard [cheat sheet](http://walking-without-crutches.heroku.com/image/images/vi-vim-cheat-sheet.png).
+
+### Keyboard cheat sheet
 
 ![vim cheat sheet image][vim-key-mapping-img]
 
@@ -94,7 +95,7 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 [NERDTree]:http://github.com/scrooloose/nerdtree
 [ctrlp]:http://github.com/kien/ctrlp.vim
 [solarized]:http://github.com/altercation/vim-colors-solarized
-[neocomplcache]:http://github.com/shougo/neocomvim cheat sheete
+[neocomplcache]:http://github.com/shougo/neocomvim
 [Fugitive]:http://github.com/tpope/vim-fugitive
 [Surround]:https://github.com/tpope/vim-surround
 [Tagbar]:http://github.com/godlygeek/tagbar
