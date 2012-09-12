@@ -79,6 +79,8 @@ Here's some tips if you've never used VIM before:
   convenient location.
 * Keyboard [cheat sheet](http://walking-without-crutches.heroku.com/image/images/vi-vim-cheat-sheet.png).
 
+![vim cheat sheet image][vim-key-mapping-img]
+
 # CREDITS
 
 Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://github.com/spf13/spf13-vim)
@@ -100,3 +102,4 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 [Matchit]:http://www.vim.org/scripts/script.php?script_id=39
 [Tabularize]:http://github.com/godlygeek/tabular
 
+[vim-key-mapping-img]:http://i.imgur.com/ABUHq.png
