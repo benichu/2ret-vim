@@ -181,18 +181,6 @@
                                     " selected characters/lines in visual mode
     endif
 
-    if has('statusline')
-        set laststatus=2
-
-        " Broken down into easily includeable segments
-        set statusline=%<%f\    " Filename
-        set statusline+=%w%h%m%r " Options
-        set statusline+=%{fugitive#statusline()} " Git Hotness
-        set statusline+=\ [%{&ff}/%Y]            " filetype
-        set statusline+=\ [%{getcwd()}]          " current dir
-        set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
-    endif
-
     set backspace=indent,eol,start  " backspace for dummies
     set linespace=0                 " No extra spaces between rows
     set nu                          " Line numbers on
@@ -558,7 +546,6 @@
             set guifont=Andale\ Mono\ Regular:h16,Menlo\ Regular:h15,Consolas\ Regular:h16,Courier\ New\ Regular:h18
         endif
         if has('gui_macvim')
-            set transparency=5          " Make the window slightly transparent
             " Fullscreen takes up entire screen
             set fuoptions=maxhorz,maxvert
             " Automatically resize splits when resizing MacVim window
