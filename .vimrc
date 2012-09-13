@@ -539,7 +539,7 @@
      " }
 
      " NerdCommenter {
-        map <leader>\ <plug>NERDCommenterComment
+        map \\ <plug>NERDCommenterComment
      " }
 " }
 
