@@ -139,16 +139,15 @@
     set viewoptions=folds,options,cursor,unix,slash " better unix / windows compatibility
     set virtualedit=onemore         " allow for cursor beyond last character
     set history=1000                " Store a ton of history (default is 20)
-    set spell                       " spell checking on
     set hidden                      " allow buffer switching without saving
 
     " Setting up the directories {
-        set backup                      " backups are nice ...
-        if has('persistent_undo')
-            set undofile                "so is persistent undo ...
-            set undolevels=1000         "maximum number of changes that can be undone
-            set undoreload=10000        "maximum number lines to save for undo on a buffer reload
-        endif
+    set backup                      " backups are nice ...
+    if has('persistent_undo')
+        set undofile                "so is persistent undo ...
+        set undolevels=1000         "maximum number of changes that can be undone
+        set undoreload=10000        "maximum number lines to save for undo on a buffer reload
+    endif
 
     " To disable views set
     " g:two_ret_no_views = 1
@@ -216,10 +215,6 @@
     " add json syntax highlighting
     au BufNewFile,BufRead *.json set ft=javascript
     au BufNewFile,BufRead COMMIT_EDITMSG set filetype=gitcommit
-    au BufNewFile,BufRead *.txt    :setlocal spell spelllang=en_us
-    au BufNewFile,BufRead README   :setlocal spell spelllang=en_us
-    au BufNewFile,BufRead CHANGES  :setlocal spell spelllang=en_us
-
 " }
 
 " Key (re)Mappings {
@@ -541,9 +536,9 @@
         set cursorline
         set antialias
         if has("gui_gtk2")
-            set guifont=Andale\ Mono\ Regular\ 16,Menlo\ Regular\ 15,Consolas\ Regular\ 16,Courier\ New\ Regular\ 18
-        else
-            set guifont=Andale\ Mono\ Regular:h16,Menlo\ Regular:h15,Consolas\ Regular:h16,Courier\ New\ Regular:h18
+            set guifont=Monaco\ 14,Menlo\ Regular\ 15,Consolas\ Regular\ 16,Courier\ New\ Regular\ 18
+          elseif
+            set guifont=Monaco:14,Menlo\ Regular:h15,Consolas\ Regular:h16,Courier\ New\ Regular:h18
         endif
         if has('gui_macvim')
             " Fullscreen takes up entire screen
