@@ -48,17 +48,17 @@
 
     " In your .vimrc.bundles.local file"
     " list only the plugin groups you will use
-    if !exists('g:2ret_bundle_groups')
-        let g:2ret_bundle_groups=['general', 'programming', 'ruby', 'javascript', 'html', 'misc']
+    if !exists('g:two_ret_bundle_groups')
+        let g:two_ret_bundle_groups=['general', 'programming', 'ruby', 'javascript', 'html', 'misc']
     endif
 
     " To override all the included bundles, put
-    " g:override_2ret_bundles = 1
+    " g:override_two_ret_bundles = 1
     " in your .vimrc.bundles.local file"
-    if !exists("g:override_2ret_bundles")
+    if !exists("g:override_two_ret_bundles")
 
     " General
-        if count(g:2ret_bundle_groups, 'general')
+        if count(g:two_ret_bundle_groups, 'general')
             Bundle 'altercation/vim-colors-solarized'
             Bundle 'tpope/vim-surround'
             Bundle 'AutoClose'
@@ -72,7 +72,7 @@
         endif
 
     " General Programming
-        if count(g:2ret_bundle_groups, 'programming')
+        if count(g:two_ret_bundle_groups, 'programming')
             Bundle 'garbas/vim-snipmate'
             Bundle 'spf13/snipmate-snippets'
             " Source support_function.vim to support snipmate-snippets.
@@ -90,20 +90,20 @@
         endif
 
     " Javascript
-        if count(g:2ret_bundle_groups, 'javascript')
+        if count(g:two_ret_bundle_groups, 'javascript')
             Bundle 'leshill/vim-json'
             Bundle 'groenewege/vim-less'
             Bundle 'taxilian/vim-web-indent'
         endif
 
     " HTML
-        if count(g:2ret_bundle_groups, 'html')
+        if count(g:two_ret_bundle_groups, 'html')
             Bundle 'amirh/HTML-AutoCloseTag'
             Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
         endif
 
     " Ruby
-        if count(g:2ret_bundle_groups, 'ruby')
+        if count(g:two_ret_bundle_groups, 'ruby')
             Bundle 'tpope/vim-rails'
             let g:rubycomplete_buffer_loading = 1
             "let g:rubycomplete_classes_in_global = 1
@@ -112,7 +112,7 @@
         endif
 
     " Misc
-        if count(g:2ret_bundle_groups, 'misc')
+        if count(g:two_ret_bundle_groups, 'misc')
             Bundle 'tpope/vim-markdown'
             Bundle 'spf13/vim-preview'
             Bundle 'tpope/vim-cucumber'
@@ -151,9 +151,9 @@
         endif
 
     " To disable views set
-    " g:2ret_no_views = 1
+    " g:two_ret_no_views = 1
     " in your .vimrc.bundles.local file"
-    if !exists('g:2ret_no_views')
+    if !exists('g:two_ret_no_views')
         " Could use * rather than *.*, but I prefer to leave .files unsaved
         au BufWinLeave *.* silent! mkview  "make vim save view (state) (folds, cursor, etc)
         au BufWinEnter *.* silent! loadview "make vim load view (state) (folds, cursor, etc)
