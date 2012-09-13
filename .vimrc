@@ -68,6 +68,7 @@
             Bundle 'godlygeek/csapprox'
             Bundle 'flazz/vim-colorschemes'
             Bundle 'sjl/gundo.vim'
+            Bundle 'tpope/vim-commentary'
         endif
 
     " General Programming
@@ -80,7 +81,6 @@
             endif
 
             Bundle 'tpope/vim-fugitive'
-            Bundle 'scrooloose/nerdcommenter'
             Bundle 'godlygeek/tabular'
             if executable('ctags')
                 Bundle 'majutsushi/tagbar'
@@ -522,9 +522,6 @@
 
      " }
 
-     " NerdCommenter {
-        map \\ <plug>NERDCommenterComment
-     " }
 " }
 
 " GUI Settings {

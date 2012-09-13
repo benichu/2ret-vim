@@ -54,7 +54,7 @@ Here are a few of the plugins:
 
 ## [Surround]
 
-## [NERDCommenter]
+## [Vim-commentary]
 
 ## [Neocomplcache]
 
@@ -111,8 +111,7 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 [2ret-vim]:https://github.com/benichu/2ret-vim
 
 [Vundle]:http://github.com/gmarik/vundle
-[NERDCommenter]:http://github.com/scrooloose/nerdcommenter
-[NERDTree]:http://github.com/scrooloose/nerdtree
+[Vim-commentary]:http://github.com/tpope/vim-commentary
 [Neocomplcache]:http://github.com/shougo/neocomvim
 [Fugitive]:http://github.com/tpope/vim-fugitive
 [Surround]:https://github.com/tpope/vim-surround
