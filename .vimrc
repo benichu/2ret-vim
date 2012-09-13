@@ -130,6 +130,7 @@
     filetype plugin indent on   " Automatically detect file types.
     syntax on                   " syntax highlighting
     set mouse=a                 " automatically enable mouse usage
+    set visualbell              " do not beep
     scriptencoding utf-8
     autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
     " always switch to the current file directory.
@@ -291,7 +292,7 @@
     nmap <leader>f9 :set foldlevel=9<CR>
 
     "clearing highlighted search
-    nmap <silent> <leader>/ :nohlsearch<CR>
+    nmap <leader><space> :nohlsearch<CR>
 
     " Shortcuts
     " Change Working Directory to that of the current file
@@ -537,6 +538,9 @@
 
      " }
 
+     " NerdCommenter {
+        map <leader>\ <plug>NERDCommenterComment
+     " }
 " }
 
 " GUI Settings {
