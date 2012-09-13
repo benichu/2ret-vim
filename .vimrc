@@ -63,7 +63,6 @@
             Bundle 'tpope/vim-surround'
             Bundle 'AutoClose'
             Bundle 'kien/ctrlp.vim'
-            Bundle 'vim-scripts/sessionman.vim'
             Bundle 'matchit.zip'
             Bundle 'Lokaltog/vim-powerline'
             Bundle 'godlygeek/csapprox'
@@ -449,18 +448,11 @@
         endif
      " }
 
-     " Session List {
-        set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize
-        nmap <leader>sl :SessionList<CR>
-        nmap <leader>ss :SessionSave<CR>
-     " }
-
      " ctrlp {
         let g:ctrlp_map = '<leader>f' " mapping to invoke |CtrlP| in |Normal| mode
         let g:ctrlp_working_path_mode = 2
         let g:ctrlp_max_height = 20 " maximum height of the match window
         let g:ctrlp_dotfiles = 0 " don’t want to search for dotfiles and dotdirs
-        " let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$|'
         let g:ctrlp_custom_ignore = {
               \ 'dir':  '\.git$\|\.hg$\|\.svn$\|db/sphinx/*\|\.build$\|build$\|Build$\|\.cache$\|cache$\|Cache$',
               \ 'file': '\.log$\|\.pid$\|\.png$\|\.jpg$\|\.gif$\|\.class$\|\.pyc$\|\.tar.gz|\.swp$',
