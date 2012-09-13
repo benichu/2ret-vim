@@ -150,15 +150,6 @@
         set undoreload=10000        "maximum number lines to save for undo on a buffer reload
     endif
 
-    " To disable views set
-    " g:two_ret_no_views = 1
-    " in your .vimrc.bundles.local file"
-    if !exists('g:two_ret_no_views')
-        " Could use * rather than *.*, but I prefer to leave .files unsaved
-        au BufWinLeave *.* silent! mkview  "make vim save view (state) (folds, cursor, etc)
-        au BufWinEnter *.* silent! loadview "make vim load view (state) (folds, cursor, etc)
-    endif
-    " }
 " }
 
 " Vim UI {
@@ -571,7 +562,6 @@ function! InitializeDirectories()
     let prefix = '.vim'
     let dir_list = {
                 \ 'backup': 'backupdir',
-                \ 'views': 'viewdir',
                 \ 'swap': 'directory' }
 
     if has('persistent_undo')
