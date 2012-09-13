@@ -549,7 +549,7 @@
         set antialias
         if has("gui_gtk2")
             set guifont=Monaco\ 15,Menlo\ Regular\ 15,Consolas\ Regular\ 16,Courier\ New\ Regular\ 18
-          elseif
+        else
             set guifont=Monaco:15,Menlo\ Regular:h15,Consolas\ Regular:h16,Courier\ New\ Regular:h18
         endif
         if has('gui_macvim')
