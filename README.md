@@ -163,7 +163,9 @@ file
 Ack.vim uses ack to search inside the current directory for a pattern.
 You can learn more about it with :help Ack
 
-**QuickStart** :Ack
+**QuickStart** `:Ack`
+
+**Customization** `<leader>fw` will `Ack` the word under your cursor.
 
 ## [Tagbar]
 
