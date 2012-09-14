@@ -14,7 +14,7 @@
 The distribution is completely customisable using a `~/.vimrc.local`
 and `~/.vimrc.bundles.local` Vim RC files.
 
-![2ret-vim image][2ret-vim-img]
+![2ret-vim image][2ret-vim-img-1]
 
 # INSTALLATION (Linux, *nix, Mac OSX Installation)
 
@@ -158,4 +158,4 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 [Gundo]:https://github.com/sjl/gundo.vim
 
 [vim-key-mapping-img]:http://i.imgur.com/hP67T.png
-[2ret-vim-image]:http://i.imgur.com/bCtak.png
+[2ret-vim-img-1]:http://i.imgur.com/bCtak.png
