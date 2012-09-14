@@ -117,6 +117,7 @@
             Bundle 'spf13/vim-preview'
             Bundle 'tpope/vim-cucumber'
             Bundle 'mattn/gist-vim'
+            Bundle 'mattn/webapi-vim'
         endif
 
     endif
@@ -392,6 +393,25 @@
         " Setting the author var
         " If forking, please overwrite in your .vimrc.local file
         let g:snips_author = 'Ben Thouret <ben@2ret.com>'
+    " }
+
+    " Gist {
+        if executable("pbcopy")
+            " The copy command
+            let g:gist_clip_command = 'pbcopy'
+        elseif executable("xclip")
+            " The copy command
+            let g:gist_clip_command = 'xclip -selection clipboard'
+        elseif executable("putclip")
+            " The copy command
+            let g:gist_clip_command = 'putclip'
+        end
+
+        " detect filetype if vim failed auto-detection.
+        let g:gist_detect_filetype = 1
+        " open browser after the post
+        let g:gist_open_browser_after_post = 1
+        let g:gist_private = 1
     " }
 
     " Ack.vim {
