@@ -14,6 +14,8 @@
 The distribution is completely customisable using a `~/.vimrc.local`
 and `~/.vimrc.bundles.local` Vim RC files.
 
+![2ret-vim image][2ret-vim-img]
+
 # INSTALLATION (Linux, *nix, Mac OSX Installation)
 
 The easiest way to install 2ret-vim is to use our [automatic installer](http://2ret.com/vim)
@@ -26,6 +28,12 @@ This will install 2ret-vim and backup your existing vim configuration.
 
 ```
 
+## Requirements:
+
+* git (ex: ubuntu `apt-get install git-core`)
+* vim (ex: ubuntu `apt-get install vim-nox`)
+* curl
+
 ## Updating to the latest version
 
 ```bash
@@ -37,6 +45,15 @@ This will install 2ret-vim and backup your existing vim configuration.
 # OPTIMIZED .vimrc CONFIG FILE
 
 ## Customization
+
+Create `~/.vimrc.local` and `~/.gvimrc.local` for any local
+customizations.
+
+For example, to override the default color schemes:
+
+```bash
+    echo colorscheme ir_black  >> ~/.vimrc.local
+```
 
 # PLUGINS
 
@@ -63,6 +80,21 @@ Here are a few of the plugins:
 ## [Ack.vim]
 
 ## [Tagbar]
+
+Plugin for browsing the tags of source code files.
+It provides a sidebar that displays the ctags-generated tags of the current
+file, ordered by their scope.
+
+**QuickStart** `CTRL-]` while the cursor is on a keyword (such as a function name)
+to jump to it's definition.
+
+**Customizations**: 2ret-vim binds `<F8>` to toggle the tagbar panel
+
+    Install dependency with exuberant ctags
+
+    install http://ctags.sf.net
+    ex: ubuntu `sudo apt-get install exuberant-ctags`
+    ex: macos `brew install ctags && sudo mv /usr/bin/ctags /usr/bin/ctags.bak`
 
 ## [ZoomWin]
 
@@ -116,7 +148,7 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 [Neocomplcache]:http://github.com/shougo/neocomvim
 [Fugitive]:http://github.com/tpope/vim-fugitive
 [Surround]:https://github.com/tpope/vim-surround
-[Tagbar]:http://github.com/godlygeek/tagbar
+[Tagbar]:http://github.com/majutsushi/tagbar
 [Syntastic]:http://github.com/scrooloose/syntastic
 [Matchit]:http://www.vim.org/scripts/script.php?script_id=39
 [Tabularize]:http://github.com/godlygeek/tabular
@@ -126,3 +158,4 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 [Gundo]:https://github.com/sjl/gundo.vim
 
 [vim-key-mapping-img]:http://i.imgur.com/hP67T.png
+[2ret-vim image]:http://i.imgur.com/bCtak.png
