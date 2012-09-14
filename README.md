@@ -63,6 +63,10 @@ It fixes many of the inconveniences of vanilla vim including
    * & more
  * Configuring included plugins
 
+
+    TODO: Add Basic re-Mappings
+
+
 It uses [Vundle] has an excellent system built on the same principles as Pathogen,
 but with an integrated plugin management system that is Git and Github aware.
 
@@ -93,13 +97,73 @@ Here are a few of the plugins:
 
 ## [Surround]
 
+This plugin is a tool for dealing with pairs of "surroundings."  Examples
+of surroundings include parentheses, quotes, and HTML tags.  They are
+closely related to what Vim refers to as text-objects.  Provided
+are mappings to allow for removing, changing, and adding surroundings.
+
+Details follow on the exact semantics, but first, consider the following
+examples.  An asterisk (*) is used to denote the cursor position.
+
+      Old text                  Command     New text ~
+      "Hello *world!"           ds"         Hello world!
+      [123+4*56]/2              cs])        (123+456)/2
+      "Look ma, I'm *HTML!"     cs"<q>      <q>Look ma, I'm HTML!</q>
+      if *x>3 {                 ysW(        if ( x>3 ) {
+      my $str = *whee!;         vlllls'     my $str = 'whee!';
+
+For instance, if the cursor was inside `"foo bar"`, you could type
+`cs"'` to convert the text to `'foo bar'`.
+
+There's a lot more, check it out at `:help surround`
+
 ## [Vim-commentary]
+
+**QuickStart** `\\\` to comment or uncomment a text selection
 
 ## [Neocomplcache]
 
+NeoComplCache is an amazing autocomplete plugin with additional support for snippets.
+It can complete simulatiously from the dictionary, buffer, omnicomplete and snippets.
+
+**QuickStart** Just start typing, it will autocomplete where possible
+
+**Customizations**:
+
+ * Automatically present the autocomplete menu
+ * Support tab and enter for autocomplete
+ * `<C-k>` for completing snippets.
+
 ## [Fugitive]
 
+Fugitive adds pervasive git support to git directories in vim. For more
+information, use `:help fugitive`
+
+Use `:Gstatus` to view `git status` and type `-` on any file to stage or
+unstage it. Type `p` on a file to enter `git add -p` and stage specific
+hunks in the file.
+
+Use `:Gdiff` on an open file to see what changes have been made to that
+file
+
+**QuickStart** `<leader>gs` to bring up git status
+
+**Customizations**:
+
+ * `<leader>gs` :Gstatus<CR>
+ * `<leader>gd` :Gdiff<CR>
+ * `<leader>gc` :Gcommit<CR>
+ * `<leader>gb` :Gblame<CR>
+ * `<leader>gl` :Glog<CR>
+ * `<leader>gp` :Git push<CR>
+ * :Git ___ will pass anything along to git.
+
 ## [Ack.vim]
+
+Ack.vim uses ack to search inside the current directory for a pattern.
+You can learn more about it with :help Ack
+
+**QuickStart** :Ack
 
 ## [Tagbar]
 
@@ -127,6 +191,12 @@ restore the previous set of windows.
 
 ## [Ctrlp.vim]
 
+Ctrlp replaces the Command-T plugin with a 100% viml plugin. It provides an intuitive and
+fast mechanism to load files from the file system (with regex and fuzzy find),
+from open buffers, and from recently used files.
+
+**QuickStart** `<leader>f`
+
 ## [Gundo]
 
 [Navigate changes history tree](http://vimcasts.org/episodes/undo-branching-and-gundo-vim/)
@@ -144,6 +214,7 @@ Here's some tips if you've never used VIM before:
 * Read the slides by Drew Neil at [VIM: Walking Without Crutches](http://walking-without-crutches.heroku.com/#1).
 * Blog post by Yann Esposito: [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)
 * Blog post by Mislav Marohnić: [Vim: revisited](http://mislav.uniqpath.com/2011/12/vim-revisited/)
+* Blog post by Michael Jakl: [Vim Introduction and Tutorial](http://blog.interlinked.org/tutorials/vim_tutorial.html)
 
 ## Modes
 
