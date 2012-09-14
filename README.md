@@ -197,7 +197,7 @@ Ctrlp replaces the Command-T plugin with a 100% viml plugin. It provides an intu
 fast mechanism to load files from the file system (with regex and fuzzy find),
 from open buffers, and from recently used files.
 
-**QuickStart** `<leader>f`
+**QuickStart** `CTRL-p`
 
 ## [Gundo]
 
