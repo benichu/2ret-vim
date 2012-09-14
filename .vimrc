@@ -463,7 +463,7 @@
 
      " ctrlp {
         let g:ctrlp_map = '<leader>f' " mapping to invoke |CtrlP| in |Normal| mode
-        let g:ctrlp_working_path_mode = 2
+        let g:ctrlp_working_path_mode = 'rc'
         let g:ctrlp_max_height = 20 " maximum height of the match window
         let g:ctrlp_dotfiles = 0 " don’t want to search for dotfiles and dotdirs
         let g:ctrlp_custom_ignore = {
