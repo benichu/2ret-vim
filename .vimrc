@@ -69,6 +69,7 @@
             Bundle 'flazz/vim-colorschemes'
             Bundle 'sjl/gundo.vim'
             Bundle 'tpope/vim-commentary'
+            Bundle 'vim-scripts/ZoomWin'
         endif
 
     " General Programming

@@ -120,9 +120,18 @@ to jump to it's definition.
 
 ## [ZoomWin]
 
+Quickly make the current window zooms into a full screen and when done,
+restore the previous set of windows.
+
+**QuickStart** `<leader>z`
+
 ## [Ctrlp.vim]
 
 ## [Gundo]
+
+[Navigate changes history tree](http://vimcasts.org/episodes/undo-branching-and-gundo-vim/)
+
+**QuickStart** `F5`
 
 # Intro to VIM
 
