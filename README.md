@@ -44,7 +44,7 @@ This will install 2ret-vim and backup your existing vim configuration.
 
 # OPTIMIZED .vimrc CONFIG FILE
 
-![2ret-vim vimrc image][2ret-vim-img-1]
+![2ret-vim vimrc image][2ret-vim-vimrc]
 
 The .vimrc file is suited to programming. It is well organized and
 folds in sections. Each section is labeled and each option is commented.
