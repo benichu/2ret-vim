@@ -44,6 +44,28 @@ This will install 2ret-vim and backup your existing vim configuration.
 
 # OPTIMIZED .vimrc CONFIG FILE
 
+![2ret-vim vimrc image][2ret-vim-img-1]
+
+The .vimrc file is suited to programming. It is well organized and
+folds in sections. Each section is labeled and each option is commented.
+
+It fixes many of the inconveniences of vanilla vim including
+
+ * A single config can be used across Windows, Mac and linux
+ * Eliminates swap and backup files from littering directories, preferring to store in a central location.
+ * Fixes common typos like :W, :Q, etc
+ * Setup a solid set of settings for Formatting (change to meet your needs)
+ * Setup the interface to take advantage of vim's features including
+   * omnicomplete
+   * line numbers
+   * syntax highlighting
+   * A better ruler & status line
+   * & more
+ * Configuring included plugins
+
+It uses [Vundle] has an excellent system built on the same principles as Pathogen,
+but with an integrated plugin management system that is Git and Github aware.
+
 ## Customization
 
 Create `~/.vimrc.local` and `~/.gvimrc.local` for any local
@@ -159,3 +181,4 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 
 [vim-key-mapping-img]:http://i.imgur.com/hP67T.png
 [2ret-vim-img-1]:http://i.imgur.com/bCtak.png
+[2ret-vim-vimrc]:http://i.imgur.com/g4NQI.png
