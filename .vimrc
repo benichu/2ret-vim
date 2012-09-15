@@ -92,14 +92,14 @@
     " Javascript
         if count(g:two_ret_bundle_groups, 'javascript')
             Bundle 'leshill/vim-json'
-            Bundle 'groenewege/vim-less'
             Bundle 'taxilian/vim-web-indent'
             Bundle 'kchmck/vim-coffee-script'
         endif
 
-    " HTML
+    " HTML/HAML/CSS
         if count(g:two_ret_bundle_groups, 'html')
             Bundle 'amirh/HTML-AutoCloseTag'
+            Bundle 'tpope/vim-haml'
             Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
         endif
 
@@ -116,7 +116,6 @@
         if count(g:two_ret_bundle_groups, 'misc')
             Bundle 'tpope/vim-markdown'
             Bundle 'spf13/vim-preview'
-            Bundle 'tpope/vim-cucumber'
             Bundle 'mattn/gist-vim'
             Bundle 'mattn/webapi-vim'
         endif
