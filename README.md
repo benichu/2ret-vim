@@ -37,7 +37,7 @@ This will install 2ret-vim and backup your existing vim configuration.
 ## Updating to the latest version
 
 ```bash
-    cd $HOME/to/2ret-vim/
+    cd $HOME/.2ret-vim/
     git pull
     vim +BundleInstall! +BundleClean +q
 ```
