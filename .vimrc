@@ -100,7 +100,7 @@
         if count(g:two_ret_bundle_groups, 'html')
             Bundle 'amirh/HTML-AutoCloseTag'
             Bundle 'tpope/vim-haml'
-            Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
+            Bundle 'hail2u/vim-css3-syntax'
         endif
 
     " Ruby
