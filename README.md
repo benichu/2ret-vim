@@ -64,7 +64,7 @@ It fixes many of the inconveniences of vanilla vim including
  * Configuring included plugins
  * Automatically remove trailing whitespaces when saving a file
 
-It uses [Vundle] has an excellent system built on the same principles as Pathogen,
+It uses [Vundle] which has an excellent system built on the same principles as Pathogen,
 but with an integrated plugin management system that is Git and Github aware.
 
 ## Some Basic Mappings
