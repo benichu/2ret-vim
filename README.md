@@ -69,7 +69,7 @@ but with an integrated plugin management system that is Git and Github aware.
 
 ## Some Basic Mappings
 
-The leader key is mapped to `,`
+The `leader` key is mapped to `,`
 
 * `<leader><leader>`            - switch between the currently open buffer and the previous one
 * `<leader><space>`             - remove search highlighting
