@@ -316,14 +316,14 @@
     map zh zH
 
     "" Windows & Navigation
-    " open a new vertical split window and switchto it
+    " open a new vertical split window and switch to it
     nnoremap <leader>w <C-w>v<C-w>l
 
     " switch between the currently open buffer and the
     " previous one
     nnoremap <leader><leader> <c-^>
 
-    "" Textmate style key mappings for indentation
+    " Textmate style key mappings for indentation
     nmap <D-[> <<
     nmap <D-]> >>
     vmap <D-[> <gv

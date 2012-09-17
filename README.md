@@ -62,13 +62,22 @@ It fixes many of the inconveniences of vanilla vim including
    * A better ruler & status line
    * & more
  * Configuring included plugins
-
-
-    TODO: Add Basic re-Mappings
-
+ * Automatically remove trailing whitespaces when saving a file
 
 It uses [Vundle] has an excellent system built on the same principles as Pathogen,
 but with an integrated plugin management system that is Git and Github aware.
+
+## Some Basic Mappings
+
+The leader key is mapped to `,`
+
+* `<leader><leader>`            - switch between the currently open buffer and the previous one
+* `<leader><space>`             - Remove search highlighting
+* `<leader>w`                   - open a new vertical split window and switch to it
+* `<leader>z`                   - Zoom In/Out current window
+* `<command>[` and `<command>]` - Textmate style key mappings for indentation
+* `Y`                           - Yank from cursor to end of line
+* `arrows`                      - inactive, please use `h,j,k,l`
 
 ## Customization
 
@@ -123,7 +132,7 @@ There's a lot more, check it out at `:help surround`
 
 ## [Neocomplcache]
 
-NeoComplCache is an amazing autocomplete plugin with additional support for snippets.
+NeoComplCache is an autocomplete plugin with additional support for snippets.
 It can complete simulatiously from the dictionary, buffer, omnicomplete and snippets.
 
 **QuickStart** Just start typing, it will autocomplete where possible
@@ -158,6 +167,8 @@ file
  * `<leader>gp` :Git push<CR>
  * :Git ___ will pass anything along to git.
 
+For more: [vimcast: Fugitive](http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/)
+
 ## [Ack.vim]
 
 Ack.vim uses ack to search inside the current directory for a pattern.
@@ -184,6 +195,8 @@ to jump to it's definition.
     ex: ubuntu `sudo apt-get install exuberant-ctags`
     ex: macos `brew install ctags && sudo mv /usr/bin/ctags /usr/bin/ctags.bak`
 
+    Run ctags -R in project root to generate tags
+
 ## [ZoomWin]
 
 Quickly make the current window zooms into a full screen and when done,
@@ -193,9 +206,8 @@ restore the previous set of windows.
 
 ## [Ctrlp.vim]
 
-Ctrlp replaces the Command-T plugin with a 100% viml plugin. It provides an intuitive and
-fast mechanism to load files from the file system (with regex and fuzzy find),
-from open buffers, and from recently used files.
+Ctrlp provides an intuitive and fast mechanism to load files from the file system
+(with regex and fuzzy find), from open buffers, and from recently used files.
 
 **QuickStart** `CTRL-p`
 
@@ -204,6 +216,14 @@ from open buffers, and from recently used files.
 [Navigate changes history tree](http://vimcasts.org/episodes/undo-branching-and-gundo-vim/)
 
 **QuickStart** `F5`
+
+## [Gist]
+
+Gist current file/selection
+
+Requires setting GITHUB_TOKEN and GITHUB_USER Env's
+
+**QuickStart** `:Gist`
 
 # Intro to VIM
 
@@ -260,6 +280,7 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 [ZoomWin]:https://github.com/vim-scripts/ZoomWin
 [Ctrlp.vim]:https://github.com/kien/ctrlp.vim.git
 [Gundo]:https://github.com/sjl/gundo.vim
+[Gist]:https://github.com/mattn/gist-vim
 
 [vim-key-mapping-img]:http://i.imgur.com/hP67T.png
 [2ret-vim-img-1]:http://i.imgur.com/bCtak.png
