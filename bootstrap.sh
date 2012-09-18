@@ -20,13 +20,16 @@ for i in $HOME/.vim $HOME/.vimrc $HOME/.gvimrc; do [ -e $i ] && mv $i $i.$today;
 
 
 echo "cloning 2ret-vim\n"
+echo "backing up '2ret-vim' git repository before safely cloning latest version\n"
+mv $endpath $endpath.$today
 git clone --recursive http://github.com/benichu/2ret-vim.git $endpath
 mkdir -p $endpath/.vim/bundle
 ln -s $endpath/.vimrc $HOME/.vimrc
 ln -s $endpath/.vim $HOME/.vim
 
-echo "Installing Vundle"
+echo "Installing Vundle\n"
 git clone http://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
 
-echo "installing plugins using Vundle"
+echo "installing plugins using Vundle\n"
 vim +BundleInstall! +BundleClean +qall
+echo "DONE!"
