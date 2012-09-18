@@ -15,7 +15,7 @@ echo "thanks for installing 2ret-vim\n"
 
 # Backup existing .vim stuff
 echo "backing up current vim config\n"
-today=`date +%Y%m%d`
+today=`date +%F-%T`
 for i in $HOME/.vim $HOME/.vimrc $HOME/.gvimrc; do [ -e $i ] && mv $i $i.$today; done
 
 
