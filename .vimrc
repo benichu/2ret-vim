@@ -127,8 +127,6 @@
     set mouse=a                 " automatically enable mouse usage
     set visualbell              " do not beep
     scriptencoding utf-8
-    autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
-    " always switch to the current file directory.
 
     " set autowrite                  " automatically write a file when leaving a modified buffer
     set shortmess+=filmnrxoOtT      " abbrev. of messages (avoids 'hit enter')
