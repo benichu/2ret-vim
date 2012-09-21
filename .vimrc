@@ -366,7 +366,7 @@
 
         " automatically open and close the popup menu / preview window
         au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
-        set completeopt=menu,preview,longest
+        set completeopt=menu,preview
     " }
 
     " Ctags {

@@ -269,7 +269,7 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 
 [Vundle]:http://github.com/gmarik/vundle
 [Vim-commentary]:http://github.com/tpope/vim-commentary
-[Neocomplcache]:http://github.com/shougo/neocomvim
+[Neocomplcache]:http://github.com/Shougo/neocomplcache
 [Fugitive]:http://github.com/tpope/vim-fugitive
 [Surround]:https://github.com/tpope/vim-surround
 [Tagbar]:http://github.com/majutsushi/tagbar
