@@ -15,11 +15,13 @@ echo "thanks for installing 2ret-vim\n"
 
 # Backup existing .vim stuff
 echo "backing up current vim config\n"
-today=`date +%Y%m%d`
+today=`date +%F-%T`
 for i in $HOME/.vim $HOME/.vimrc $HOME/.gvimrc; do [ -e $i ] && [ ! -L $file ] && mv $i $i.$today; done
 
 
 echo "cloning 2ret-vim\n"
+echo "backing up '2ret-vim' git repository before safely cloning latest version\n"
+mv $endpath $endpath.$today
 git clone --recursive http://github.com/benichu/2ret-vim.git $endpath
 mkdir -p $endpath/.vim/bundle
 ln -s $endpath/.vimrc $HOME/.vimrc
