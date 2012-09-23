@@ -36,6 +36,18 @@ This will install 2ret-vim and backup your existing vim configuration.
 
 ## Updating to the latest version
 
+The simpliest (and safest) way to update is to simply rerun the installer.
+It will completely and non destructively upgrade to the latest version.
+
+```bash
+
+    curl http://2ret.com/vim -L -o - | sh
+
+```
+
+Alternatively you can manually perform the following steps.
+If anything has changed with the structure of the configuration you will need to create the appropriate symlinks.
+
 ```bash
     cd $HOME/.2ret-vim/
     git pull

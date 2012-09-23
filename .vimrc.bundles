@@ -1,0 +1,122 @@
+" Modeline and Notes {
+" vim: set foldmarker={,} foldlevel=0 foldmethod=marker:
+"
+"    #######  ########  ######## ########         ##     ## #### ##     ##
+"   ##     ## ##     ## ##          ##            ##     ##  ##  ###   ###
+"          ## ##     ## ##          ##            ##     ##  ##  #### ####
+"    #######  ########  ######      ##    ####### ##     ##  ##  ## ### ##
+"   ##        ##   ##   ##          ##             ##   ##   ##  ##     ##
+"   ##        ##    ##  ##          ##              ## ##    ##  ##     ##
+"   ######### ##     ## ########    ##               ###    #### ##     ##
+"
+"   This is the personal .vimrc file of Ben Thouret.
+"
+" }
+"
+" Environment {
+    " Basics {
+        set nocompatible        " must be first line
+        set background=dark     " Assume a dark background
+    " }
+
+    " Setup Bundle Support {
+    " The next three lines ensure that the ~/.vim/bundle/ system works
+        filetype off
+        set rtp+=~/.vim/bundle/vundle
+        call vundle#rc()
+    " }
+
+" }
+
+" Bundles {
+    " Deps
+        Bundle 'gmarik/vundle'
+        Bundle 'MarcWeber/vim-addon-mw-utils'
+        Bundle 'tomtom/tlib_vim'
+        if executable('ack-grep')
+            let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+            Bundle 'mileszs/ack.vim'
+        elseif executable('ack')
+            Bundle 'mileszs/ack.vim'
+        endif
+
+    " Use local bundles if available {
+        if filereadable(expand("~/.vimrc.bundles.local"))
+            source ~/.vimrc.bundles.local
+        endif
+    " }
+
+    " In your .vimrc.bundles.local file"
+    " list only the plugin groups you will use
+    if !exists('g:two_ret_bundle_groups')
+        let g:two_ret_bundle_groups=['general', 'programming', 'ruby', 'javascript', 'html', 'misc']
+    endif
+
+    " To override all the included bundles, put
+    " g:override_two_ret_bundles = 1
+    " in your .vimrc.bundles.local file"
+    if !exists("g:override_two_ret_bundles")
+
+    " General
+        if count(g:two_ret_bundle_groups, 'general')
+            Bundle 'altercation/vim-colors-solarized'
+            Bundle 'tpope/vim-surround'
+            Bundle 'AutoClose'
+            Bundle 'kien/ctrlp.vim'
+            Bundle 'matchit.zip'
+            Bundle 'Lokaltog/vim-powerline'
+            Bundle 'godlygeek/csapprox'
+            Bundle 'flazz/vim-colorschemes'
+            Bundle 'sjl/gundo.vim'
+            Bundle 'tpope/vim-commentary'
+            Bundle 'vim-scripts/ZoomWin'
+        endif
+
+    " General Programming
+        if count(g:two_ret_bundle_groups, 'programming')
+            Bundle 'tpope/vim-fugitive'
+            Bundle 'godlygeek/tabular'
+            if executable('ctags')
+                Bundle 'majutsushi/tagbar'
+            endif
+            Bundle 'Shougo/neocomplcache'
+            Bundle 'Shougo/neocomplcache-snippets-complete'
+        endif
+
+    " Javascript
+        if count(g:two_ret_bundle_groups, 'javascript')
+            Bundle 'leshill/vim-json'
+            Bundle 'taxilian/vim-web-indent'
+            Bundle 'kchmck/vim-coffee-script'
+        endif
+
+    " HTML/HAML/CSS
+        if count(g:two_ret_bundle_groups, 'html')
+            Bundle 'amirh/HTML-AutoCloseTag'
+            Bundle 'tpope/vim-haml'
+            Bundle 'hail2u/vim-css3-syntax'
+        endif
+
+    " Ruby
+        if count(g:two_ret_bundle_groups, 'ruby')
+            Bundle 'tpope/vim-rails'
+            let g:rubycomplete_buffer_loading = 1
+            "let g:rubycomplete_classes_in_global = 1
+            "let g:rubycomplete_rails = 1
+            Bundle 'tpope/vim-bundler'
+        endif
+
+    " Misc
+        if count(g:two_ret_bundle_groups, 'misc')
+            Bundle 'tpope/vim-markdown'
+            Bundle 'spf13/vim-preview'
+            Bundle 'mattn/gist-vim'
+            Bundle 'mattn/webapi-vim'
+        endif
+
+    endif
+" }
+
+" General {
+    set shortmess+=filmnrxoOtT      " abbrev. of messages (avoids 'hit enter')
+" }
