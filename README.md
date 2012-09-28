@@ -31,7 +31,7 @@ This will install 2ret-vim and backup your existing vim configuration.
 ## Requirements:
 
 * git (ex: ubuntu `apt-get install git-core`)
-* vim (ex: ubuntu `apt-get install vim-nox`)
+* vim 7.3+ (ex: ubuntu `apt-get install vim-nox`)
 * curl
 
 ## Updating to the latest version
