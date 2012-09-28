@@ -47,4 +47,3 @@ fi
 
 echo "installing plugins using Vundle\n"
 vim -u $endpath/.vimrc.bundles - +BundleInstall! +BundleClean +qall
-echo "DONE!"
