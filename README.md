@@ -249,6 +249,7 @@ Here's some tips if you've never used VIM before:
 * Blog post by Yann Esposito: [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)
 * Blog post by Mislav Marohnić: [Vim: revisited](http://mislav.uniqpath.com/2011/12/vim-revisited/)
 * Blog post by Michael Jakl: [Vim Introduction and Tutorial](http://blog.interlinked.org/tutorials/vim_tutorial.html)
+* Blog post by Jon Beltran de Heredia: [Why, oh WHY, do those #?@! nutheads use vi?](http://www.viemu.com/a-why-vi-vim.html)
 
 ## Modes
 
