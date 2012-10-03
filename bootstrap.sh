@@ -33,9 +33,9 @@ else
 fi
 
 echo "setting up symlinks"
-ln -s $endpath/.vimrc $HOME/.vimrc
-ln -s $endpath/.vimrc.bundles $HOME/.vimrc.bundles
-ln -s $endpath/.vim $HOME/.vim
+lnif $endpath/.vimrc $HOME/.vimrc
+lnif $endpath/.vimrc.bundles $HOME/.vimrc.bundles
+lnif $endpath/.vim $HOME/.vim
 if [ ! -d $endpath/.vim/bundle ]; then
     mkdir -p $endpath/.vim/bundle
 fi
