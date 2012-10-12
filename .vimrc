@@ -126,6 +126,7 @@
     set foldenable                  " auto fold code
     set list
     set listchars=tab:,.,trail:.,extends:#,nbsp:. " Highlight problematic whitespace
+    let g:netrw_liststyle=3 " netrw tree style listing
 
 " }
 
