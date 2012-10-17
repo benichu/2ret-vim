@@ -266,13 +266,13 @@ Here's some tips if you've never used VIM before:
   2ret-vim uses `let mapleader = ","` to change this to `,` which is in a consistent and
   convenient location.
 
-### Keyboard cheat sheet
+### Vim cheat sheet
 
 [source cheatsheet](http://vimcheatsheet.com/)
 
 ![vim cheatsheet image][vim-cheatsheet]
 
-### Keyboard key mapping cheat sheet
+### Keyboard cheat sheet
 
 [source cheatsheet](http://walking-without-crutches.heroku.com/image/images/vi-vim-cheat-sheet.png)
 
