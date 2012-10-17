@@ -268,9 +268,15 @@ Here's some tips if you've never used VIM before:
 
 ### Keyboard cheat sheet
 
-[source cheat sheet](http://walking-without-crutches.heroku.com/image/images/vi-vim-cheat-sheet.png)
+[source cheatsheet](http://vimcheatsheet.com/)
 
-![vim cheat sheet image][vim-key-mapping-img]
+![vim cheatsheet image][vim-cheatsheet]
+
+### Keyboard key mapping cheat sheet
+
+[source cheatsheet](http://walking-without-crutches.heroku.com/image/images/vi-vim-cheat-sheet.png)
+
+![vim key mapping cheatsheet image][vim-key-mapping-img]
 
 # CREDITS
 
@@ -296,5 +302,6 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 [Gist]:https://github.com/mattn/gist-vim
 
 [vim-key-mapping-img]:http://i.imgur.com/hP67T.png
+[vim-cheatsheet]:http://i.imgur.com/PQQrd.png
 [2ret-vim-img-1]:http://i.imgur.com/bCtak.png
 [2ret-vim-vimrc]:http://i.imgur.com/g4NQI.png
