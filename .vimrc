@@ -338,9 +338,9 @@
     " }
 
     " Ack.vim {
-        " :Ack the word under the cursor recursively and open the location list.
-        nnoremap <leader>fw :silent Ack! \\b<C-r><C-w>\\b<Bar>:lwindow<CR>
-        vnoremap <leader>fw "zy:silent Ack! <C-r>z<Bar>:lwindow<CR>
+        nnoremap <leader>a :Ack
+        " run Ack against word under cursor
+        nnoremap <leader>A :Ack <c-r><c-w><CR>
     " }
 
     " Powerline {
