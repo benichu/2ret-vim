@@ -80,7 +80,7 @@
                 Bundle 'majutsushi/tagbar'
             endif
             Bundle 'Shougo/neocomplcache'
-            Bundle 'Shougo/neocomplcache-snippets-complete'
+            Bundle 'Shougo/neosnippet'
         endif
 
     " Javascript
