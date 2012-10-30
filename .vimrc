@@ -16,7 +16,6 @@
 " Environment {
     " Basics {
         set nocompatible        " must be first line
-        set background=dark     " Assume a dark background
         if has ("unix") && "Darwin" != system("echo -n \"$(uname)\"")
           " on Linux use + register for copy-paste
           set clipboard=unnamedplus
@@ -28,6 +27,7 @@
 
     " Setup Bundle Support {
     " The next three lines ensure that the ~/.vim/bundle/ system works
+        filetype on
         filetype off
         set rtp+=~/.vim/bundle/vundle
         call vundle#rc()
@@ -50,6 +50,7 @@
 
 " General {
     set background=dark         " Assume a dark background
+    set nomodeline
     if !has('gui')
         "set term=$TERM          " Make arrow and other keys work
     endif
@@ -89,6 +90,9 @@
     set showmode                    " display the current mode
 
     set cursorline                  " highlight current line
+
+    " avoiding annoying CSApprox warning message
+    let g:CSApprox_verbose_level = 0
 
     if has('statusline')
         set laststatus=2
