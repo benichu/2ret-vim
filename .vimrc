@@ -434,8 +434,12 @@
         let g:neocomplcache_enable_auto_select = 0
 
         " SuperTab like snippets behavior.
-        imap  <silent><expr><tab>  neocomplcache#sources#snippets_complete#expandable() ? "\<plug>(neocomplcache_snippets_expand)" : (pumvisible() ? "\<c-e>" : "\<tab>")
-        smap  <tab>  <right><plug>(neocomplcache_snippets_jump)
+        imap <expr><TAB> neosnippet#expandable() ?
+         \ "\<Plug>(neosnippet_expand_or_jump)"
+         \: pumvisible() ? "\<C-n>" : "\<TAB>"
+        smap <expr><TAB> neosnippet#expandable() ?
+         \ "\<Plug>(neosnippet_expand_or_jump)"
+         \: "\<TAB>"
 
         " Plugin key-mappings.
         imap <C-k>     <Plug>(neocomplcache_snippets_expand)
