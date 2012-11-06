@@ -282,9 +282,9 @@
         let b:match_ignorecase = 1
     " }
 
-    " Gundo {
-        "" gundo plugin shortcut
-        nnoremap <F5> :GundoToggle<CR>
+    " UndoTree {
+        nnoremap <F5> :UndotreeToggle<CR>
+        let g:undotree_SetFocusWhenToggle=1 " if undotree is opened, it is likely one wants to interact with it.
     " }
 
     " ZoomWin {

@@ -223,9 +223,13 @@ Ctrlp provides an intuitive and fast mechanism to load files from the file syste
 
 **QuickStart** `CTRL-p`
 
-## [Gundo]
+## [Undotree]
 
-[Navigate changes history tree](http://vimcasts.org/episodes/undo-branching-and-gundo-vim/)
+If you undo changes and then make a new change, in most editors the changes you undid are gone forever, as their undo-history is a simple list.
+Since version 7.0 vim uses an undo-tree instead. If you make a new change after undoing changes, a new branch is created in that tree.
+Combined with persistent undo, this is nearly as flexible and safe as git ;-)
+
+Undotree makes that feature more accessible by creating a visual representation of said undo-tree.
 
 **QuickStart** `F5`
 
@@ -300,6 +304,7 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 [Ctrlp.vim]:https://github.com/kien/ctrlp.vim.git
 [Gundo]:https://github.com/sjl/gundo.vim
 [Gist]:https://github.com/mattn/gist-vim
+[Undotree]:https://github.com/mbbill/undotree
 
 [vim-key-mapping-img]:http://i.imgur.com/hP67T.png
 [vim-cheatsheet]:http://i.imgur.com/PQQrd.png
