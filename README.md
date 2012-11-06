@@ -151,6 +151,9 @@ It can complete simulatiously from the dictionary, buffer, omnicomplete and snip
  * Support tab and enter for autocomplete
  * `<C-k>` for completing snippets.
 
+Check out the repository of snippets included:
+[https://github.com/honza/snipmate-snippets](https://github.com/honza/snipmate-snippets/tree/master/snippets)
+
 ## [Fugitive]
 
 Fugitive adds pervasive git support to git directories in vim. For more
