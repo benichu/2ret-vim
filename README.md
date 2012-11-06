@@ -23,9 +23,7 @@ by simply copying and pasting the following line into a terminal.
 This will install 2ret-vim and backup your existing vim configuration.
 
 ```bash
-
     curl http://2ret.com/vim -L -o - | sh
-
 ```
 
 ## Requirements:
@@ -40,9 +38,7 @@ The simpliest (and safest) way to update is to simply rerun the installer.
 It will completely and non destructively upgrade to the latest version.
 
 ```bash
-
     curl http://2ret.com/vim -L -o - | sh
-
 ```
 
 Alternatively you can manually perform the following steps.
