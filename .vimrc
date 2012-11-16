@@ -399,7 +399,7 @@
         let g:ctrlp_max_height = 20 " maximum height of the match window
         let g:ctrlp_dotfiles = 0 " don’t want to search for dotfiles and dotdirs
         let g:ctrlp_custom_ignore = {
-              \ 'dir':  '\.git$\|\.hg$\|\.svn$\|db/sphinx/*\|\.build$\|build$\|Build$\|\.cache$\|cache$\|Cache$\|_site$',
+              \ 'dir':  '\.git$\|\.hg$\|\.svn$\|db/sphinx/*\|\.build$\|build$\|Build$\|\.cache$\|cache$\|*cache$\|Cache$\|_site$\|node_modules$',
               \ 'file': '\.log$\|\.pid$\|\.png$\|\.jpg$\|\.gif$\|\.class$\|\.pyc$\|\.tar.gz|\.swp$',
               \ }
      "}
