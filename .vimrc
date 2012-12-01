@@ -155,6 +155,7 @@
     " add json syntax highlighting
     au BufNewFile,BufRead *.json set ft=javascript
     au BufNewFile,BufRead COMMIT_EDITMSG set filetype=gitcommit
+    autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
 " }
 
 " Key (re)Mappings {
