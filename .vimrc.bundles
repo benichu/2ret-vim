@@ -61,7 +61,7 @@
         if count(g:two_ret_bundle_groups, 'general')
             Bundle 'altercation/vim-colors-solarized'
             Bundle 'tpope/vim-surround'
-            Bundle 'AutoClose'
+            Bundle 'vim-scripts/Auto-Pairs'
             Bundle 'kien/ctrlp.vim'
             Bundle 'matchit.zip'
             Bundle 'Lokaltog/vim-powerline'
@@ -89,6 +89,7 @@
             Bundle 'leshill/vim-json'
             Bundle 'taxilian/vim-web-indent'
             Bundle 'kchmck/vim-coffee-script'
+            Bundle 'pangloss/vim-javascript'
         endif
 
     " HTML/HAML/CSS
