@@ -61,7 +61,6 @@
         if count(g:two_ret_bundle_groups, 'general')
             Bundle 'altercation/vim-colors-solarized'
             Bundle 'tpope/vim-surround'
-            Bundle 'vim-scripts/Auto-Pairs'
             Bundle 'kien/ctrlp.vim'
             Bundle 'matchit.zip'
             Bundle 'Lokaltog/vim-powerline'
