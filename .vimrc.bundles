@@ -62,6 +62,7 @@
             Bundle 'altercation/vim-colors-solarized'
             Bundle 'tpope/vim-surround'
             Bundle 'kien/ctrlp.vim'
+            Bundle 'spf13/vim-autoclose'
             Bundle 'matchit.zip'
             Bundle 'Lokaltog/vim-powerline'
             Bundle 'godlygeek/csapprox'
