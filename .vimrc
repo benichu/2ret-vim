@@ -90,6 +90,8 @@
     set showmode                    " display the current mode
 
     set cursorline                  " highlight current line
+    highlight clear SignColumn      " SignColumn should match background for
+                                    " things like vim-gitgutter
 
     " avoiding annoying CSApprox warning message
     let g:CSApprox_verbose_level = 0

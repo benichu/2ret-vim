@@ -85,6 +85,7 @@
             Bundle 'Shougo/neocomplcache'
             Bundle 'Shougo/neosnippet'
             Bundle 'honza/snipmate-snippets'
+            Bundle 'airblade/vim-gitgutter'
         endif
 
     " Javascript
