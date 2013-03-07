@@ -15,6 +15,9 @@ lnif() {
     if [ ! -e $2 ] ; then
         ln -s $1 $2
     fi
+    if [ -L $2 ] ; then
+        ln -sf $1 $2
+    fi
 }
 
 echo "thanks for installing 2ret-vim\n"
