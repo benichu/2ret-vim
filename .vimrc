@@ -346,9 +346,9 @@
     " }
 
     " Ack.vim {
-        nnoremap <leader>a :Ack
+        nnoremap <leader>a :Ack!
         " run Ack against word under cursor
-        nnoremap <leader>A :Ack <c-r><c-w><CR>
+        nnoremap <leader>A :Ack! <c-r><c-w><CR>
     " }
 
     " Powerline {
