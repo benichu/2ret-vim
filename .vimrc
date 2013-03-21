@@ -422,10 +422,10 @@
         let g:neocomplcache_force_overwrite_completefunc = 1
 
         " SuperTab like snippets behavior.
-        imap <silent><expr><TAB> neosnippet#expandable() ?
-            \ "\<Plug>(neosnippet_expand_or_jump)" : (pumvisible() ?
-            \ "\<C-e>" : "\<TAB>")
-        smap <TAB> <Right><Plug>(neosnippet_jump_or_expand)
+        " imap <silent><expr><TAB> neosnippet#expandable() ?
+        "     \ "\<Plug>(neosnippet_expand_or_jump)" : (pumvisible() ?
+        "     \ "\<C-e>" : "\<TAB>")
+        " smap <TAB> <Right><Plug>(neosnippet_jump_or_expand)
 
         " Define dictionary.
         let g:neocomplcache_dictionary_filetype_lists = {
@@ -441,8 +441,8 @@
         let g:neocomplcache_keyword_patterns._ = '\h\w*'
 
         " Plugin key-mappings.
-        imap <C-k> <Plug>(neosnippet_expand_or_jump)
-        smap <C-k> <Plug>(neosnippet_expand_or_jump)
+        " imap <C-k> <Plug>(neosnippet_expand_or_jump)
+        " smap <C-k> <Plug>(neosnippet_expand_or_jump)
         inoremap <expr><C-g> neocomplcache#undo_completion()
         inoremap <expr><C-l> neocomplcache#complete_common_string()
         inoremap <expr><CR> neocomplcache#complete_common_string()
@@ -478,8 +478,8 @@
         let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
         let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
 
-        " use honza's snippets
-        let g:neocomplcache_snippets_dir='~/.vim/bundle/snipmate-snippets/snippets'
+        " " use honza's snippets
+        " let g:neocomplcache_snippets_dir='~/.vim/bundle/snipmate-snippets/snippets'
 
         " For snippet_complete marker.
         if has('conceal')
