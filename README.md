@@ -216,7 +216,12 @@ restore the previous set of windows.
 Ctrlp provides an intuitive and fast mechanism to load files from the file system
 (with regex and fuzzy find), from open buffers, and from recently used files.
 
-**QuickStart** `CTRL-p`
+**QuickStart** `<CTRL>-p`: will run the find file mode.
+
+**Shortcuts**
+
+* `1<CTRL>-p`: will run `:CtrlPBuffer`, the open buffers mode.
+* `2<CTRL>-p`: will run `:CtrlPMRU`, the MRU files mode.
 
 ## [Undotree]
 
