@@ -389,8 +389,10 @@
      " ctrlp {
         let g:ctrlp_map = '<c-p>' " mapping to invoke |CtrlP| in |Normal| mode
         let g:ctrlp_working_path_mode = 'rc'
+        let g:ctrlp_cmd = 'exe "CtrlP".get(["", "Buffer", "MRU"], v:count)' " default command used for the default mapping
         let g:ctrlp_max_height = 20 " maximum height of the match window
         let g:ctrlp_dotfiles = 0 " don’t want to search for dotfiles and dotdirs
+        let g:ctrlp_mruf_relative = 1 " show only MRU files in the working directory
         let g:ctrlp_custom_ignore = {
               \ 'dir':  '\.git$\|\.hg$\|\.svn$\|tmp$\|db/sphinx/*\|\.build$\|build$\|Build$\|dist$\|\.cache$\|cache$\|*cache$\|Cache$\|_site$\|node_modules$\|docco$',
               \ 'file': '\.log$\|\.pid$\|\.png$\|\.jpg$\|\.gif$\|\.class$\|\.pyc$\|\.tar.gz|\.swp$',

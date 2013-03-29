@@ -140,8 +140,8 @@ There's a lot more, check it out at `:help surround`
 
 ## [Neocomplcache]
 
-NeoComplCache is an autocomplete plugin with additional support for snippets.
-It can complete simulatiously from the dictionary, buffer, omnicomplete and snippets.
+NeoComplCache is an autocomplete plugin.
+It can complete simultaniously from the dictionary, buffer, omnicomplete.
 
 **QuickStart** Just start typing, it will autocomplete where possible
 
@@ -149,10 +149,6 @@ It can complete simulatiously from the dictionary, buffer, omnicomplete and snip
 
  * Automatically present the autocomplete menu
  * Support tab and enter for autocomplete
- * `<C-k>` for completing snippets.
-
-Check out the repository of snippets included:
-[https://github.com/honza/snipmate-snippets](https://github.com/honza/snipmate-snippets/tree/master/snippets)
 
 ## [Fugitive]
 
