@@ -148,7 +148,7 @@
     set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
 
     " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-    au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
+    au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,config.ru}    set ft=ruby
     " add json syntax highlighting
     au BufNewFile,BufRead *.json set ft=javascript
     au BufNewFile,BufRead COMMIT_EDITMSG set filetype=gitcommit
