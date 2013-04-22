@@ -73,6 +73,7 @@
             Bundle 'mbbill/undotree'
             Bundle 'tpope/vim-commentary'
             Bundle 'vim-scripts/ZoomWin'
+            Bundle 'terryma/vim-multiple-cursors'
         endif
 
     " General Programming
