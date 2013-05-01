@@ -67,7 +67,7 @@
             Bundle 'kien/ctrlp.vim'
             Bundle 'spf13/vim-autoclose'
             Bundle 'matchit.zip'
-            Bundle 'Lokaltog/vim-powerline'
+            Bundle 'Lokaltog/powerline'
             Bundle 'godlygeek/csapprox'
             Bundle 'flazz/vim-colorschemes'
             Bundle 'mbbill/undotree'

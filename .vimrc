@@ -82,10 +82,10 @@
     if filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
         let g:solarized_termcolors=256
         color solarized                 " load a colorscheme
-    endif
         let g:solarized_termtrans=1
         let g:solarized_contrast="high"
         let g:solarized_visibility="high"
+    endif
     set tabpagemax=15               " only show 15 tabs
     set showmode                    " display the current mode
 
@@ -98,6 +98,7 @@
 
     if has('statusline')
         set laststatus=2
+        set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)"
 
         " Broken down into easily includeable segments
         set statusline=%<%f\    " Filename
@@ -353,6 +354,14 @@
           set guifont=Menlo\ for\ Powerline
           let g:Powerline_symbols = 'fancy'
         endif
+        if ! has('gui_running')
+          set ttimeoutlen=10
+          augroup FastEscape
+            autocmd!
+            au InsertEnter * set timeoutlen=0
+            au InsertLeave * set timeoutlen=1000
+          augroup END
+        endif
     " }
 
     " Tabularize {
@@ -411,6 +420,8 @@
         nnoremap <silent> <leader>gb :Gblame<CR>
         nnoremap <silent> <leader>gl :Glog<CR>
         nnoremap <silent> <leader>gp :Git push<CR>
+        nnoremap <silent> <leader>gw :Gwrite<CR>:GitGutter<CR>
+        nnoremap <silent> <leader>gg :GitGutterToggle<CR>
      "}
 
      " neocomplcache {
