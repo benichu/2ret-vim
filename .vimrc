@@ -347,23 +347,6 @@
         nnoremap <leader>A :Ack! <c-r><c-w><CR>
     " }
 
-    " Powerline {
-        if has('gui_running')
-          " Powerline configuration
-          " https://github.com/Lokaltog/vim-powerline/tree/develop/fontpatcher
-          set guifont=Menlo\ for\ Powerline
-          let g:Powerline_symbols = 'fancy'
-        endif
-        if ! has('gui_running')
-          set ttimeoutlen=10
-          augroup FastEscape
-            autocmd!
-            au InsertEnter * set timeoutlen=0
-            au InsertLeave * set timeoutlen=1000
-          augroup END
-        endif
-    " }
-
     " Tabularize {
         if exists(":Tabularize")
           nmap <leader>a= :Tabularize /=<CR>

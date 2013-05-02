@@ -67,11 +67,6 @@
             Bundle 'kien/ctrlp.vim'
             Bundle 'spf13/vim-autoclose'
             Bundle 'matchit.zip'
-            if has("python") || has("python3")
-              Bundle 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
-            else
-              Bundle 'Lokaltog/vim-powerline'
-            endif
             Bundle 'godlygeek/csapprox'
             Bundle 'flazz/vim-colorschemes'
             Bundle 'mbbill/undotree'
