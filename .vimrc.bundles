@@ -63,16 +63,17 @@
     " General
         if count(g:two_ret_bundle_groups, 'general')
             Bundle 'altercation/vim-colors-solarized'
-            Bundle 'tpope/vim-surround'
-            Bundle 'kien/ctrlp.vim'
-            Bundle 'spf13/vim-autoclose'
-            Bundle 'matchit.zip'
-            Bundle 'godlygeek/csapprox'
             Bundle 'flazz/vim-colorschemes'
+            Bundle 'godlygeek/csapprox'
+            Bundle 'kien/ctrlp.vim'
+            Bundle 'matchit.zip'
             Bundle 'mbbill/undotree'
-            Bundle 'tpope/vim-commentary'
-            Bundle 'vim-scripts/ZoomWin'
+            Bundle 'myusuf3/numbers.vim'
+            Bundle 'spf13/vim-autoclose'
             Bundle 'terryma/vim-multiple-cursors'
+            Bundle 'tpope/vim-commentary'
+            Bundle 'tpope/vim-surround'
+            Bundle 'vim-scripts/ZoomWin'
         endif
 
     " General Programming
@@ -88,10 +89,10 @@
 
     " Javascript
         if count(g:two_ret_bundle_groups, 'javascript')
-            Bundle 'leshill/vim-json'
-            Bundle 'taxilian/vim-web-indent'
+            Bundle 'elzr/vim-json'
             Bundle 'kchmck/vim-coffee-script'
             Bundle 'pangloss/vim-javascript'
+            Bundle 'taxilian/vim-web-indent'
         endif
 
     " HTML/HAML/CSS
@@ -105,17 +106,15 @@
         if count(g:two_ret_bundle_groups, 'ruby')
             Bundle 'tpope/vim-rails'
             let g:rubycomplete_buffer_loading = 1
-            "let g:rubycomplete_classes_in_global = 1
-            "let g:rubycomplete_rails = 1
             Bundle 'tpope/vim-bundler'
         endif
 
     " Misc
         if count(g:two_ret_bundle_groups, 'misc')
-            Bundle 'tpope/vim-markdown'
-            Bundle 'spf13/vim-preview'
             Bundle 'mattn/gist-vim'
             Bundle 'mattn/webapi-vim'
+            Bundle 'spf13/vim-preview'
+            Bundle 'tpope/vim-markdown'
         endif
 
     endif
