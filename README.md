@@ -176,6 +176,12 @@ file
 
 For more: [vimcast: Fugitive](http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/)
 
+## [vim-airline]
+
+Lean & mean statusline for vim that's light as air (100% vimscript).
+
+![vim-airline image][vim-airline-img]
+
 ## [Ack.vim]
 
 Ack.vim uses ack to search inside the current directory for a pattern.
@@ -286,27 +292,29 @@ Here's some tips if you've never used VIM before:
 
 Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://github.com/spf13/spf13-vim)
 
+[2ret-vim]:https://github.com/benichu/2ret-vim
 [MacVim]:http://code.google.com/p/macvim/
 [spf13-vim]:https://github.com/spf13/spf13-vim
-[2ret-vim]:https://github.com/benichu/2ret-vim
 
-[Vundle]:http://github.com/gmarik/vundle
-[Vim-commentary]:http://github.com/tpope/vim-commentary
-[Neocomplcache]:http://github.com/Shougo/neocomplcache
-[Fugitive]:http://github.com/tpope/vim-fugitive
-[Surround]:https://github.com/tpope/vim-surround
-[Tagbar]:http://github.com/majutsushi/tagbar
-[Syntastic]:http://github.com/scrooloose/syntastic
-[Matchit]:http://www.vim.org/scripts/script.php?script_id=39
-[Tabularize]:http://github.com/godlygeek/tabular
+[vim-airline]:https://github.com/bling/vim-airline
 [Ack.vim]:https://github.com/mileszs/ack.vim
-[ZoomWin]:https://github.com/vim-scripts/ZoomWin
 [Ctrlp.vim]:https://github.com/kien/ctrlp.vim.git
-[Gundo]:https://github.com/sjl/gundo.vim
+[Fugitive]:http://github.com/tpope/vim-fugitive
 [Gist]:https://github.com/mattn/gist-vim
+[Gundo]:https://github.com/sjl/gundo.vim
+[Matchit]:http://www.vim.org/scripts/script.php?script_id=39
+[Neocomplcache]:http://github.com/Shougo/neocomplcache
+[Surround]:https://github.com/tpope/vim-surround
+[Syntastic]:http://github.com/scrooloose/syntastic
+[Tabularize]:http://github.com/godlygeek/tabular
+[Tagbar]:http://github.com/majutsushi/tagbar
 [Undotree]:https://github.com/mbbill/undotree
+[Vim-commentary]:http://github.com/tpope/vim-commentary
+[Vundle]:http://github.com/gmarik/vundle
+[ZoomWin]:https://github.com/vim-scripts/ZoomWin
 
-[vim-key-mapping-img]:http://i.imgur.com/hP67T.png
-[vim-cheatsheet]:http://i.imgur.com/PQQrd.png
 [2ret-vim-img-1]:http://i.imgur.com/bCtak.png
 [2ret-vim-vimrc]:http://i.imgur.com/g4NQI.png
+[vim-airline-img]:http://imgur.com/GIh5ARI.jpg
+[vim-cheatsheet]:http://i.imgur.com/PQQrd.png
+[vim-key-mapping-img]:http://i.imgur.com/hP67T.png
