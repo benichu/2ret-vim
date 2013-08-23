@@ -176,11 +176,25 @@ file
 
 For more: [vimcast: Fugitive](http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/)
 
-## [vim-airline]
+## [Vim-airline]
 
 Lean & mean statusline for vim that's light as air (100% vimscript).
 
 ![vim-airline image][vim-airline-img]
+
+## [Vim-multiple-cursors]
+
+A great plugin for quick refactoring!
+
+![vim-multiple-cursors image][vim-multiple-cursors-img]
+
+**QuickStart** `<CTRL-n>`
+
+Out of the box, all you need to know is a single key `Ctrl-n`. Pressing the key in Normal mode highlights the current word under the cursor in Visual mode and places a virtual cursor at the end of it. Pressing it again finds the next ocurrence and places another virtual cursor at the end of the visual selection. If you select multiple lines in Visual mode, pressing the key puts a virtual cursor at every line and leaves you in Normal mode.
+
+After you've marked all your locations with `Ctrl-n`, you can change the visual selection with normal Vim motion commands in Visual mode. You could go to Normal mode by pressing `v` and wield your motion commands there. Single key command to switch to Insert mode such as `c` or `s` from Visual mode or `i`, `a`, `I`, `A` in Normal mode should work without any issues.
+
+At any time, you can press `<Esc>` to exit back to regular Vim.
 
 ## [Ack.vim]
 
@@ -296,7 +310,6 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 [MacVim]:http://code.google.com/p/macvim/
 [spf13-vim]:https://github.com/spf13/spf13-vim
 
-[vim-airline]:https://github.com/bling/vim-airline
 [Ack.vim]:https://github.com/mileszs/ack.vim
 [Ctrlp.vim]:https://github.com/kien/ctrlp.vim.git
 [Fugitive]:http://github.com/tpope/vim-fugitive
@@ -309,7 +322,9 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 [Tabularize]:http://github.com/godlygeek/tabular
 [Tagbar]:http://github.com/majutsushi/tagbar
 [Undotree]:https://github.com/mbbill/undotree
+[Vim-airline]:https://github.com/bling/vim-airline
 [Vim-commentary]:http://github.com/tpope/vim-commentary
+[Vim-multiple-cursors]:https://github.com/terryma/vim-multiple-cursors
 [Vundle]:http://github.com/gmarik/vundle
 [ZoomWin]:https://github.com/vim-scripts/ZoomWin
 
@@ -318,3 +333,4 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 [vim-airline-img]:http://imgur.com/GIh5ARI.jpg
 [vim-cheatsheet]:http://i.imgur.com/PQQrd.png
 [vim-key-mapping-img]:http://i.imgur.com/hP67T.png
+[vim-multiple-cursors-img]:http://i.imgur.com/ajqUJM2.gif
