@@ -14,14 +14,23 @@
 " }
 "
 " Environment {
+
+    " Identify platform {
+        silent function! OSX()
+            return has('macunix')
+        endfunction
+        silent function! LINUX()
+            return has('unix') && !has('macunix') && !has('win32unix')
+        endfunction
+        silent function! WINDOWS()
+            return  (has('win16') || has('win32') || has('win64'))
+        endfunction
+    " }
+
     " Basics {
         set nocompatible        " must be first line
-        if has ("unix") && "Darwin" != system("echo -n \"$(uname)\"")
-          " on Linux use + register for copy-paste
-          set clipboard=unnamedplus
-        else
-          " one mac and windows, use * register for copy-paste
-          set clipboard=unnamed
+        if !WINDOWS()
+            set shell=/bin/sh
         endif
     " }
 
@@ -59,6 +68,12 @@
     set mouse=a                 " automatically enable mouse usage
     set visualbell              " do not beep
     scriptencoding utf-8
+
+    if LINUX()   " On Linux use + register for copy-paste
+        set clipboard=unnamedplus
+    else         " On mac and Windows, use * register for copy-paste
+        set clipboard=unnamed
+    endif
 
     " set autowrite                  " automatically write a file when leaving a modified buffer
     set shortmess+=filmnrxoOtT      " abbrev. of messages (avoids 'hit enter')
@@ -153,6 +168,9 @@
     " add json syntax highlighting
     au BufNewFile,BufRead *.json set ft=javascript
     au BufNewFile,BufRead COMMIT_EDITMSG set filetype=gitcommit
+    " Instead of reverting the cursor to the last position in the buffer, we
+    " set it to the first line when editing a git commit message
+    au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
     autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
     autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
 " }
@@ -487,10 +505,10 @@
         set linespace=2
         set cursorline
         set antialias
-        if has("gui_gtk2")
-            set guifont=Monaco\ 15,Menlo\ Regular\ 15,Consolas\ Regular\ 16,Courier\ New\ Regular\ 18
-        else
-            set guifont=Monaco:15,Menlo\ Regular:h15,Consolas\ Regular:h16,Courier\ New\ Regular:h18
+        if LINUX() && has("gui_running")
+            set guifont=Andale\ Mono\ Regular\ 16,Menlo\ Regular\ 15,Consolas\ Regular\ 16,Courier\ New\ Regular\ 18
+        elseif OSX() && has("gui_running")
+            set guifont=Andale\ Mono\ Regular:h16,Menlo\ Regular:h15,Consolas\ Regular:h16,Courier\ New\ Regular:h18
         endif
         if has('gui_macvim')
             " Fullscreen takes up entire screen
@@ -539,6 +557,20 @@ function! InitializeDirectories()
 endfunction
 call InitializeDirectories()
 
+" Initialize NERDTree as needed {
+function! NERDTreeInitAsNeeded()
+    redir => bufoutput
+    buffers!
+    redir END
+    let idx = stridx(bufoutput, "NERD_tree")
+    if idx > -1
+        NERDTreeMirror
+        NERDTreeFind
+        wincmd l
+    endif
+endfunction
+" }
+
 " Automatically Strip trailing whitespace on save
 function! <SID>StripTrailingWhitespaces()
     " Preparation: save last search, and cursor position.
@@ -552,28 +584,6 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
-
-" Toggle Vexplore with Ctrl-E
-function! ToggleVExplorer()
-  if exists("t:expl_buf_num")
-      let expl_win_num = bufwinnr(t:expl_buf_num)
-      if expl_win_num != -1
-          let cur_win_nr = winnr()
-          exec expl_win_num . 'wincmd w'
-          close
-          exec cur_win_nr . 'wincmd w'
-          unlet t:expl_buf_num
-      else
-          unlet t:expl_buf_num
-      endif
-  else
-      exec '1wincmd w'
-      Vexplore
-      let t:expl_buf_num = bufnr("%")
-  endif
-endfunction
-
-" }
 
 " Use local vimrc if available {
     if filereadable(expand("~/.vimrc.local"))
