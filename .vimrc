@@ -31,6 +31,8 @@
         set nocompatible        " must be first line
         if !WINDOWS()
             set shell=/bin/sh
+        else
+            set shell=/bin/bash
         endif
     " }
 
