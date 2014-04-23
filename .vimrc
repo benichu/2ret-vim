@@ -71,10 +71,12 @@
     set visualbell              " do not beep
     scriptencoding utf-8
 
-    if LINUX()   " On Linux use + register for copy-paste
-        set clipboard=unnamedplus
-    else         " On mac and Windows, use * register for copy-paste
-        set clipboard=unnamed
+    if $TMUX == '' " Fix for `E353: Nothing in register *` when using vim inside tmux
+      if LINUX()   " On Linux use + register for copy-paste
+          set clipboard=unnamedplus
+      else         " On mac and Windows, use * register for copy-paste
+          set clipboard=unnamed
+      endif
     endif
 
     " set autowrite                  " automatically write a file when leaving a modified buffer
