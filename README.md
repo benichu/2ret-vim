@@ -112,7 +112,7 @@ To add a new bundle
 
 Here are a few of the plugins:
 
-## [Turbux]
+## Turbux
 
 http://joshuadavey.com/2012/01/10/faster-tdd-feedback-with-tmux-tslime-vim-and-turbux/
 
