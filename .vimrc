@@ -495,6 +495,33 @@
             set conceallevel=2 concealcursor=i
         endif
 
+        "" vim-airline
+        let g:airline_powerline_fonts = 1
+        set guifont=Droid\ Sans\ Mono\ for\ Powerline:h16
+
+        " TMUX
+        if count(g:two_ret_bundle_groups, 'tmux')
+            " Turbux
+            " http://joshuadavey.com/post/15619414829/faster-tdd-feedback-with-tmux-tslime-vim-and
+            let g:no_turbux_mappings = 'no'
+
+            function! Run_all_specs()
+              if filereadable("./zeus.json")
+                return Send_to_Tmux("zeus rspec spec\n")
+              elseif filereadable("./bin/rspec_all")
+                return Send_to_Tmux("./bin/rspec_all\n")
+              elseif filereadable("./bin/rspec")
+                return Send_to_Tmux("bin/rspec spec\n")
+              else
+                return Send_to_Tmux("rspec spec\n")
+              endif
+            endfunction
+
+            nmap <leader>r <Plug>SendTestToTmux
+            nmap <leader>R <Plug>SendFocusedTestToTmux
+            nmap <leader>g :call Run_all_specs()<cr>
+        end
+
      " }
 
 " }

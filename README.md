@@ -112,6 +112,17 @@ To add a new bundle
 
 Here are a few of the plugins:
 
+## [Turbux]
+
+http://joshuadavey.com/2012/01/10/faster-tdd-feedback-with-tmux-tslime-vim-and-turbux/
+
+**QuickStart** `<leader>r` run current file's specs
+
+**Other Shortcuts**:
+
+ * `<leader>R` run closest specs
+ * `<leader>g` run all project's specs
+
 ## [Surround]
 
 This plugin is a tool for dealing with pairs of "surroundings."  Examples

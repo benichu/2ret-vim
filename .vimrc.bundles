@@ -51,7 +51,7 @@
     " In your .vimrc.bundles.local file"
     " list only the plugin groups you will use
     if !exists('g:two_ret_bundle_groups')
-        let g:two_ret_bundle_groups=['general', 'programming', 'ruby', 'javascript', 'html', 'misc']
+        let g:two_ret_bundle_groups=['general', 'programming', 'ruby', 'javascript', 'html', 'misc', 'tmux']
     endif
 
     " To override all the included bundles, put
@@ -61,6 +61,7 @@
 
     " General
         if count(g:two_ret_bundle_groups, 'general')
+            Bundle 'alfredodeza/jacinto.vim'
             Bundle 'altercation/vim-colors-solarized'
             Bundle 'bling/vim-airline'
             Bundle 'flazz/vim-colorschemes'
@@ -113,10 +114,14 @@
         if count(g:two_ret_bundle_groups, 'misc')
             Bundle 'mattn/gist-vim'
             Bundle 'mattn/webapi-vim'
-            Bundle 'spf13/vim-preview'
             Bundle 'tpope/vim-markdown'
         endif
 
+    " TMUX
+        if count(g:two_ret_bundle_groups, 'tmux')
+            Bundle 'jgdavey/tslime.vim'
+            Bundle 'jgdavey/vim-turbux'
+        endif
     endif
 " }
 
