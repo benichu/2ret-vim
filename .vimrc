@@ -307,8 +307,6 @@
     " }
 
     " numbers.vim {
-        nnoremap <F5> :UndotreeToggle<CR>
-        let g:undotree_SetFocusWhenToggle=1 " if undotree is opened, it is likely one wants to interact with it.
         nnoremap <F3> :NumbersToggle<CR>
         nnoremap <F4> :NumbersOnOff<CR>
     " }

@@ -123,3 +123,4 @@
 " General {
     set shortmess+=filmnrxoOtT      " abbrev. of messages (avoids 'hit enter')
 " }
+"
