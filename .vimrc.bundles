@@ -74,7 +74,7 @@
             Bundle 'terryma/vim-multiple-cursors'
             Bundle 'tpope/vim-commentary'
             Bundle 'tpope/vim-surround'
-            Bundle 'vim-scripts/ZoomWin'
+            Bundle 'regedarek/ZoomWin'
         endif
 
     " General Programming
