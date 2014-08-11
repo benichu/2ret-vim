@@ -108,6 +108,8 @@
             Bundle 'tpope/vim-rails'
             let g:rubycomplete_buffer_loading = 1
             Bundle 'tpope/vim-bundler'
+            Bundle 'kana/vim-textobj-user'
+            Bundle 'nelstrom/vim-textobj-rubyblock'
         endif
 
     " Misc
