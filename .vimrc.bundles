@@ -80,7 +80,6 @@
     " General Programming
         if count(g:two_ret_bundle_groups, 'programming')
             Bundle 'tpope/vim-fugitive'
-            Bundle 'godlygeek/tabular'
             if executable('ctags')
                 Bundle 'majutsushi/tagbar'
             endif
@@ -116,7 +115,8 @@
         if count(g:two_ret_bundle_groups, 'misc')
             Bundle 'mattn/gist-vim'
             Bundle 'mattn/webapi-vim'
-            Bundle 'tpope/vim-markdown'
+            Bundle 'godlygeek/tabular'
+            Bundle 'plasticboy/vim-markdown'
         endif
 
     " TMUX

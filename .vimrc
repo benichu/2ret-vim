@@ -499,6 +499,9 @@
         let g:airline_powerline_fonts = 1
         set guifont=Droid\ Sans\ Mono\ for\ Powerline:h16
 
+        "" vim-markdown
+        let g:vim_markdown_folding_disabled=1
+
         " TMUX
         if count(g:two_ret_bundle_groups, 'tmux')
             " Turbux
