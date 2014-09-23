@@ -85,6 +85,7 @@
             endif
             Bundle 'Shougo/neocomplcache'
             Bundle 'airblade/vim-gitgutter'
+            Bundle 'christoomey/vim-tmux-navigator'
         endif
 
     " Javascript

@@ -245,11 +245,6 @@
     cmap cwd lcd %:p:h
     cmap cd. lcd %:p:h
 
-    " Shortcut to `Vexplore` (netrw)
-    " This call a function that tries to open the Explorer window
-    " on the left hand side of the screen.
-    map <silent> <C-E> :call ToggleVExplorer()<CR>
-
     " visual shifting (does not exit Visual mode)
     vnoremap < <gv
     vnoremap > >gv
@@ -286,12 +281,6 @@
     " switch between the currently open buffer and the
     " previous one
     nnoremap <leader><leader> <c-^>
-
-    " Textmate style key mappings for indentation
-    nmap <D-[> <<
-    nmap <D-]> >>
-    vmap <D-[> <gv
-    vmap <D-]> >gv
 
 " }
 
