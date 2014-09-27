@@ -496,6 +496,7 @@
             " Turbux
             " http://joshuadavey.com/post/15619414829/faster-tdd-feedback-with-tmux-tslime-vim-and
             let g:no_turbux_mappings = 'no'
+            let g:turbux_command_prefix = 'bundle exec'
 
             function! Run_all_specs()
               if filereadable("./zeus.json")
