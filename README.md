@@ -214,7 +214,7 @@ You can learn more about it with :help Ack
 
 **QuickStart** `:Ack`
 
-**Customization** `<leader>fw` will `Ack` the word under your cursor.
+**Customization** `<leader>A` will `Ack` the word under your cursor.
 
 ## [Tagbar]
 
