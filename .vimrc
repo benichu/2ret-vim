@@ -60,11 +60,7 @@
 " }
 
 " General {
-    set background=dark         " Assume a dark background
     set nomodeline
-    if !has('gui')
-        "set term=$TERM          " Make arrow and other keys work
-    endif
     filetype plugin indent on   " Automatically detect file types.
     syntax on                   " syntax highlighting
     set mouse=a                 " automatically enable mouse usage
@@ -100,7 +96,7 @@
 " Vim UI {
     if filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
         let g:solarized_termcolors=256
-        color solarized                 " load a colorscheme
+        colorscheme solarized                 " load a colorscheme
         let g:solarized_termtrans=1
         let g:solarized_contrast="high"
         let g:solarized_visibility="high"
@@ -177,6 +173,7 @@
     au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
     autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
     autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
+    autocmd Filetype perl setlocal ts=4 sts=4 sw=4
 " }
 
 " Key (re)Mappings {
@@ -282,6 +279,10 @@
     " previous one
     nnoremap <leader><leader> <c-^>
 
+
+    "" Paste/Nopaste Switcher
+    nnoremap <F2> :set invpaste paste?<CR>
+    set pastetoggle=<F2>
 " }
 
 " Plugins {
@@ -606,3 +607,7 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
         endif
     endif
 " }
+"
+
+"" FIXME: Needs to be applied last, or does not work.
+set background=dark         " Assume a dark background

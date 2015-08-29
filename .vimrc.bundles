@@ -66,16 +66,17 @@
             Bundle 'bling/vim-airline'
             Bundle 'flazz/vim-colorschemes'
             Bundle 'godlygeek/csapprox'
-            Bundle 'roman/golden-ratio'
             Bundle 'kien/ctrlp.vim'
             Bundle 'matchit.zip'
             Bundle 'mbbill/undotree'
             Bundle 'myusuf3/numbers.vim'
+            Bundle 'regedarek/ZoomWin'
+            Bundle 'roman/golden-ratio'
+            Bundle 'sheerun/vim-polyglot'
             Bundle 'spf13/vim-autoclose'
             Bundle 'terryma/vim-multiple-cursors'
             Bundle 'tpope/vim-commentary'
             Bundle 'tpope/vim-surround'
-            Bundle 'regedarek/ZoomWin'
         endif
 
     " General Programming
@@ -110,7 +111,6 @@
             let g:rubycomplete_buffer_loading = 1
             Bundle 'tpope/vim-bundler'
             Bundle 'kana/vim-textobj-user'
-            Bundle 'nelstrom/vim-textobj-rubyblock'
         endif
 
     " Misc
