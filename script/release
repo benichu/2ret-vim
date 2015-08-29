@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# Usage: script/release
+# Tag a commit and push it to origin.
+
+set -e
+
+# Get latest tag
+
+# http://git-scm.com/docs/git-fetch
+# `-t`: Fetch all tags from the remote
+echo "Fetching origin with all remote tags..."
+git fetch -t origin
+
+latest_tag=$(git describe origin --abbrev=0 --match="v*")
+latest_release=${latest_tag:1}
+read -p "What version of 2ret-vim do you want to release today? [should be > $latest_release]: " version
+
+# Did the user provide a version?
+if [ -z "$version" ]; then echo "You have to give me a semantic tag, like 1.0.0"; exit 1; fi
+
+# Does that version contain a v prefix? (it shouldn't)
+if [[ "$version" =~ ^v|V ]]; then echo "Please do not prefix your tag with v"; exit 1; fi
+
+# Make sure we haven't released this version before.
+(git tag -l | grep -q "^v$version$") && {
+  echo "Whoops, there's already a '$version' tag."
+  exit 1
+}
+
+echo "Make sure you are GPG ready."
+echo "You should have run this at one point:"
+echo "$ git config --global user.signingkey [gpg-key-id]"
+git tag -s "v$version" -m "Release v$version"
+git push origin
+git push origin "v$version"
