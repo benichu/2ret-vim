@@ -83,7 +83,6 @@ The `leader` key is mapped to `,`
 * `<leader><space>`             - remove search highlighting
 * `<leader>w`                   - open a new vertical split window and switch to it
 * `<leader>z`                   - zoom In/Out current window
-* `<command>[` and `<command>]` - textmate style key mappings for indentation
 * `Y`                           - yank from cursor to end of line
 * `arrows`                      - inactive, please use `h,j,k,l`
 
