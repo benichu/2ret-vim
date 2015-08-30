@@ -94,13 +94,13 @@
 " }
 
 " Vim UI {
-    if filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
-        let g:solarized_termcolors=256
-        colorscheme solarized                 " load a colorscheme
-        let g:solarized_termtrans=1
-        let g:solarized_contrast="high"
-        let g:solarized_visibility="high"
-    endif
+    " Default theme is solarized
+    let g:solarized_termcolors=256
+    colorscheme solarized
+    let g:solarized_termtrans=1
+    let g:solarized_contrast="high"
+    let g:solarized_visibility="high"
+
     set tabpagemax=15               " only show 15 tabs
     set showmode                    " display the current mode
 
@@ -166,8 +166,6 @@
 
     " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
     au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,config.ru}    set ft=ruby
-    " add json syntax highlighting
-    au BufNewFile,BufRead *.json set ft=javascript
     au BufNewFile,BufRead COMMIT_EDITMSG set filetype=gitcommit
     " Instead of reverting the cursor to the last position in the buffer, we
     " set it to the first line when editing a git commit message
@@ -295,11 +293,6 @@
     " UndoTree {
         nnoremap <F5> :UndotreeToggle<CR>
         let g:undotree_SetFocusWhenToggle=1 " if undotree is opened, it is likely one wants to interact with it.
-    " }
-
-    " numbers.vim {
-        nnoremap <F3> :NumbersToggle<CR>
-        nnoremap <F4> :NumbersOnOff<CR>
     " }
 
     " ZoomWin {
@@ -488,7 +481,6 @@
 
         "" vim-airline
         let g:airline_powerline_fonts = 1
-        set guifont=Droid\ Sans\ Mono\ for\ Powerline:h16
 
         "" vim-markdown
         let g:vim_markdown_folding_disabled=1
@@ -545,7 +537,6 @@
             set t_Co=256                 " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
             let g:CSApprox_konsole = 1
         endif
-        "set term=builtin_ansi       " Make arrow and other keys work
     endif
 " }
 

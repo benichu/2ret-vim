@@ -62,18 +62,16 @@
     " General
         if count(g:two_ret_bundle_groups, 'general')
             Bundle 'alfredodeza/jacinto.vim'
-            Bundle 'altercation/vim-colors-solarized'
             Bundle 'bling/vim-airline'
             Bundle 'flazz/vim-colorschemes'
             Bundle 'godlygeek/csapprox'
             Bundle 'kien/ctrlp.vim'
             Bundle 'matchit.zip'
             Bundle 'mbbill/undotree'
-            Bundle 'myusuf3/numbers.vim'
             Bundle 'regedarek/ZoomWin'
             Bundle 'roman/golden-ratio'
             Bundle 'sheerun/vim-polyglot'
-            Bundle 'spf13/vim-autoclose'
+            Bundle 'jiangmiao/auto-pairs'
             Bundle 'terryma/vim-multiple-cursors'
             Bundle 'tpope/vim-commentary'
             Bundle 'tpope/vim-surround'
@@ -92,17 +90,11 @@
 
     " Javascript
         if count(g:two_ret_bundle_groups, 'javascript')
-            Bundle 'elzr/vim-json'
-            Bundle 'kchmck/vim-coffee-script'
-            Bundle 'pangloss/vim-javascript'
-            Bundle 'taxilian/vim-web-indent'
         endif
 
     " HTML/HAML/CSS
         if count(g:two_ret_bundle_groups, 'html')
-            Bundle 'amirh/HTML-AutoCloseTag'
             Bundle 'tpope/vim-haml'
-            Bundle 'hail2u/vim-css3-syntax'
         endif
 
     " Ruby

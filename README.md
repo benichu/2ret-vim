@@ -29,7 +29,7 @@ This will install 2ret-vim and backup your existing vim configuration.
 ## Requirements:
 
 * git (ex: ubuntu `apt-get install git-core`)
-* vim 7.3+ (ex: ubuntu `apt-get install vim-nox`)
+* vim 7.4+ (ex: ubuntu `apt-get install vim-nox`)
 * curl
 
 ## Updating to the latest version
@@ -47,7 +47,7 @@ If anything has changed with the structure of the configuration you will need to
 ```bash
     cd $HOME/.2ret-vim/
     git pull
-    vim +PluginInstall! +PluginClean +q
+    vim +PluginInstall! +PluginClean +qall
 ```
 
 # OPTIMIZED .vimrc CONFIG FILE
@@ -87,6 +87,16 @@ The `leader` key is mapped to `,`
 * `Y`                           - yank from cursor to end of line
 * `arrows`                      - inactive, please use `h,j,k,l`
 
+### Function Keys Mappings
+
+* `F2` - when you want to paste something in terminal, toggle to paste mode
+* `F5` - toggle the undo-tree panel
+* `F8` - toggle the tagbar panel
+
+### Vim in the Terminal with [Tmux](https://tmux.github.io/)
+
+    TODO: Ticks, gotchas (cut/paste, etc...)
+
 ## Customization
 
 Create `~/.vimrc.local` and `~/.gvimrc.local` for any local
@@ -111,17 +121,6 @@ To add a new bundle
 ```
 
 Here are a few of the plugins:
-
-## Turbux
-
-http://joshuadavey.com/2012/01/10/faster-tdd-feedback-with-tmux-tslime-vim-and-turbux/
-
-**QuickStart** `<leader>r` run current file's specs
-
-**Other Shortcuts**:
-
- * `<leader>R` run closest specs
- * `<leader>g` run all project's specs
 
 ## [Surround]
 
@@ -272,6 +271,15 @@ Requires setting GITHUB_TOKEN and GITHUB_USER Env's
 
 **QuickStart** `:Gist`
 
+## [Turbux]
+
+**QuickStart** `<leader>r` run current file's specs
+
+**Other Shortcuts**:
+
+ * `<leader>R` run closest specs
+ * `<leader>g` run all project's specs
+
 # Intro to VIM
 
 Here's some tips if you've never used VIM before:
@@ -329,7 +337,6 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 [Matchit]:http://www.vim.org/scripts/script.php?script_id=39
 [Neocomplcache]:http://github.com/Shougo/neocomplcache
 [Surround]:https://github.com/tpope/vim-surround
-[Syntastic]:http://github.com/scrooloose/syntastic
 [Tabularize]:http://github.com/godlygeek/tabular
 [Tagbar]:http://github.com/majutsushi/tagbar
 [Undotree]:https://github.com/mbbill/undotree
@@ -338,6 +345,7 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 [Vim-multiple-cursors]:https://github.com/terryma/vim-multiple-cursors
 [Vundle]:http://github.com/gmarik/vundle
 [ZoomWin]:https://github.com/vim-scripts/ZoomWin
+[Turbux]:http://joshuadavey.com/2012/01/10/faster-tdd-feedback-with-tmux-tslime-vim-and-turbux
 
 [2ret-vim-img-1]:http://i.imgur.com/bCtak.png
 [2ret-vim-vimrc]:http://i.imgur.com/g4NQI.png
