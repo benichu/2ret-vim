@@ -83,7 +83,7 @@
     set nospell                     " no spelling
     set hidden                      " allow buffer switching without saving
 
-    " Setting up the directories {
+    " Setting up the directories
     set backup                      " backups are nice ...
     if has('persistent_undo')
         set undofile                "so is persistent undo ...
@@ -133,7 +133,8 @@
 
     set backspace=indent,eol,start  " backspace for dummies
     set linespace=0                 " No extra spaces between rows
-    set nu                          " Line numbers on
+    set relativenumber              " User relative numbers by default
+    set number                      " Line numbers on
     set showmatch                   " show matching brackets/parenthesis
     set incsearch                   " find as you type search
     set hlsearch                    " highlight search terms
