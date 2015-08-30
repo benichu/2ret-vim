@@ -47,7 +47,7 @@ If anything has changed with the structure of the configuration you will need to
 ```bash
     cd $HOME/.2ret-vim/
     git pull
-    vim +BundleInstall! +BundleClean +q
+    vim +PluginInstall! +PluginClean +q
 ```
 
 # OPTIMIZED .vimrc CONFIG FILE
