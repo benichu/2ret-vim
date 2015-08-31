@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 NOTE: the project follows [Semantic Versioning](http://semver.org/).
 
+## 1.0.2 - 2015-08-30
+
+- Includes tpope/vim-vinegar plugin
+
 ## 1.0.1 - 2015-08-30
 
 - Removes redundant or unused plugins

@@ -143,9 +143,17 @@ For instance, if the cursor was inside `"foo bar"`, you could type
 
 There's a lot more, check it out at `:help surround`
 
+## [Vim-vinegar]
+
+vinegar.vim enhances [netrw](http://vimcasts.org/episodes/the-file-explorer/), partially in an attempt to mitigate the need for more disruptive "project drawer" style plugins.
+
+**QuickStart** Press `-` in any buffer to hop up to the directory listing and seek to the file you just came from.
+
 ## [Vim-commentary]
 
 **QuickStart** `\\\` to comment or uncomment a text selection
+
+Want to comment 3 lines? Try `3gcc`
 
 ## [Neocomplcache]
 
@@ -341,6 +349,7 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 [Undotree]:https://github.com/mbbill/undotree
 [Vim-airline]:https://github.com/bling/vim-airline
 [Vim-commentary]:http://github.com/tpope/vim-commentary
+[Vim-vinegar]:http://github.com/tpope/vim-vinegar
 [Vim-multiple-cursors]:https://github.com/terryma/vim-multiple-cursors
 [Vundle]:http://github.com/gmarik/vundle
 [ZoomWin]:https://github.com/vim-scripts/ZoomWin
