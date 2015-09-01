@@ -36,6 +36,12 @@ This will install 2ret-vim and backup your existing vim configuration.
 > To make all the plugins work, specifically [neocomplete](https://github.com/Shougo/neocomplete.vim),
 > you need [vim with lua](https://github.com/Shougo/neocomplete.vim#requirements).
 
+On Mac OSX, with homebrew, you would do something like this to reinstall your terminal vim with lua support:
+
+```bash
+$ brew update && brew uninstall --force vim && brew install vim --with-lua
+```
+
 ## Updating to the latest version
 
 The simpliest (and safest) way to update is to simply rerun the installer.
