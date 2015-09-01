@@ -91,6 +91,7 @@
 
     " Javascript
         if count(g:two_ret_bundle_groups, 'javascript')
+            Bundle 'elzr/vim-json'
         endif
 
     " HTML/HAML/CSS
