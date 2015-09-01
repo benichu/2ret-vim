@@ -8,6 +8,7 @@ NOTE: the project follows [Semantic Versioning](http://semver.org/).
 
 - Replaces Neocomplcache by neocomplete
 - Includes puppet plugin
+- Includes roy/ctrlp-funky plugin
 
 ## 1.0.2 - 2015-08-30
 

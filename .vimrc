@@ -376,6 +376,10 @@
               \ 'dir':  '\.git$\|\.hg$\|\.svn$\|tmp$\|db/sphinx/*\|\.build$\|build$\|Build$\|dist$\|\.cache$\|cache$\|*cache$\|Cache$\|_site$\|node_modules$\|bower_components$\|docco$',
               \ 'file': '\.log$\|\.pid$\|\.png$\|\.jpg$\|\.gif$\|\.class$\|\.pyc$\|\.tar.gz|\.swp$\|tags|\.tags$',
               \ }
+        " ctrlp Funky
+        nnoremap <Leader>fu :CtrlPFunky<Cr>
+        " narrow the list down with a word under cursor
+        nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
      "}
 
      " TagBar {

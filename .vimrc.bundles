@@ -66,6 +66,7 @@
             Plugin 'flazz/vim-colorschemes'
             Plugin 'godlygeek/csapprox'
             Plugin 'kien/ctrlp.vim'
+            Plugin 'tacahiroy/ctrlp-funky'
             Plugin 'matchit.zip'
             Plugin 'mbbill/undotree'
             Plugin 'regedarek/ZoomWin'
@@ -112,7 +113,7 @@
             Plugin 'mattn/gist-vim'
             Plugin 'mattn/webapi-vim'
             Plugin 'godlygeek/tabular'
-            Plugin 'tpope/vim-markdown'
+            Plugin 'plasticboy/vim-markdown'
         endif
 
     " TMUX

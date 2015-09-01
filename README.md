@@ -264,6 +264,12 @@ Ctrlp provides an intuitive and fast mechanism to load files from the file syste
 * `1<CTRL>-p`: will run `:CtrlPBuffer`, the open buffers mode.
 * `2<CTRL>-p`: will run `:CtrlPMRU`, the MRU files mode.
 
+### [ctrlp-funky](https://github.com/tacahiroy/ctrlp-funky)
+
+Very simple function navigator for ctrlp.vim.
+
+**QuickStart** `<leader>-fu`: to navigate and jump to function definitions from the current file without ctags
+
 ## [Undotree]
 
 If you undo changes and then make a new change, in most editors the changes you undid are gone forever, as their undo-history is a simple list.
