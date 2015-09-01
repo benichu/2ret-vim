@@ -29,8 +29,12 @@ This will install 2ret-vim and backup your existing vim configuration.
 ## Requirements:
 
 * git (ex: ubuntu `apt-get install git-core`)
-* vim 7.4+ (ex: ubuntu `apt-get install vim-nox`)
+* vim 7.4+ _with lua support_
 * curl
+
+    __IMPORTANT__
+    To make all the plugins work, specifically [neocomplete](https://github.com/Shougo/neocomplete.vim),
+    you need [vim with lua](https://github.com/Shougo/neocomplete.vim#requirements).
 
 ## Updating to the latest version
 

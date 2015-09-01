@@ -84,7 +84,7 @@
             if executable('ctags')
                 Bundle 'majutsushi/tagbar'
             endif
-            Bundle 'Shougo/neocomplcache'
+            Bundle 'Shougo/neocomplete.vim.git'
             Bundle 'airblade/vim-gitgutter'
             Bundle 'christoomey/vim-tmux-navigator'
         endif
