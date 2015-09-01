@@ -32,9 +32,9 @@ This will install 2ret-vim and backup your existing vim configuration.
 * vim 7.4+ _with lua support_
 * curl
 
-    __IMPORTANT__
-    To make all the plugins work, specifically [neocomplete](https://github.com/Shougo/neocomplete.vim),
-    you need [vim with lua](https://github.com/Shougo/neocomplete.vim#requirements).
+> __IMPORTANT__
+> To make all the plugins work, specifically [neocomplete](https://github.com/Shougo/neocomplete.vim),
+> you need [vim with lua](https://github.com/Shougo/neocomplete.vim#requirements).
 
 ## Updating to the latest version
 
