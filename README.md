@@ -98,9 +98,10 @@ The `leader` key is mapped to `,`
 
 ### Function Keys Mappings
 
-* `F2` - when you want to paste something in terminal, toggle to paste mode
-* `F5` - toggle the undo-tree panel
-* `F8` - toggle the tagbar panel
+* `F2`  - when you want to paste something in terminal, toggle to paste mode
+* `F5`  - toggle the undotree panel
+* `F8`  - toggle the tagbar panel
+* `F12` - validate the current buffer as json
 
 ### Vim in the Terminal with [Tmux](https://tmux.github.io/)
 

@@ -299,6 +299,10 @@
         let g:undotree_SetFocusWhenToggle=1 " if undotree is opened, it is likely one wants to interact with it.
     " }
 
+    " Jacinto {
+        nnoremap <F12> :Jacinto validate<CR>
+    " }
+
     " ZoomWin {
         map <leader>z :ZoomWin<CR>
     " }
