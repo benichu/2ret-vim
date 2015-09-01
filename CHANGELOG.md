@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 NOTE: the project follows [Semantic Versioning](http://semver.org/).
 
+## 1.1.1 - 2015-08-31
+
+- Fixes Issue #3: remap the JSON validation command to a shortcut
+
 ## 1.1.0 - 2015-08-31
 
 - Replaces Neocomplcache by neocomplete
