@@ -19,7 +19,7 @@
         set background=dark     " Assume a dark background
     " }
 
-    " Setup Bundle Support {
+    " Setup Plugin Support {
     " The next three lines ensure that the ~/.vim/bundle/ system works
         filetype off
         set rtp+=~/.vim/bundle/vundle
@@ -28,19 +28,19 @@
 
 " }
 
-" Bundles {
+" Plugins {
     " Deps
-        Bundle 'gmarik/vundle'
-        Bundle 'MarcWeber/vim-addon-mw-utils'
-        Bundle 'tomtom/tlib_vim'
+        Plugin 'gmarik/vundle'
+        Plugin 'MarcWeber/vim-addon-mw-utils'
+        Plugin 'tomtom/tlib_vim'
         if executable('ag')
-            Bundle 'mileszs/ack.vim'
+            Plugin 'mileszs/ack.vim'
             let g:ackprg = 'ag --nogroup --nocolor --column --smart-case'
         elseif executable('ack-grep')
             let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-            Bundle 'mileszs/ack.vim'
+            Plugin 'mileszs/ack.vim'
         elseif executable('ack')
-            Bundle 'mileszs/ack.vim'
+            Plugin 'mileszs/ack.vim'
         endif
     " Use local bundles if available {
         if filereadable(expand("~/.vimrc.bundles.local"))
@@ -51,7 +51,7 @@
     " In your .vimrc.bundles.local file"
     " list only the plugin groups you will use
     if !exists('g:two_ret_bundle_groups')
-        let g:two_ret_bundle_groups=['general', 'programming', 'ruby', 'javascript', 'html', 'misc', 'tmux']
+        let g:two_ret_bundle_groups=['general', 'programming', 'ruby', 'javascript', 'html', 'misc', 'tmux', 'devops']
     endif
 
     " To override all the included bundles, put
@@ -61,64 +61,69 @@
 
     " General
         if count(g:two_ret_bundle_groups, 'general')
-            Bundle 'alfredodeza/jacinto.vim'
-            Bundle 'bling/vim-airline'
-            Bundle 'flazz/vim-colorschemes'
-            Bundle 'godlygeek/csapprox'
-            Bundle 'kien/ctrlp.vim'
-            Bundle 'matchit.zip'
-            Bundle 'mbbill/undotree'
-            Bundle 'regedarek/ZoomWin'
-            Bundle 'roman/golden-ratio'
-            Bundle 'sheerun/vim-polyglot'
-            Bundle 'jiangmiao/auto-pairs'
-            Bundle 'terryma/vim-multiple-cursors'
-            Bundle 'tpope/vim-commentary'
-            Bundle 'tpope/vim-surround'
-            Bundle 'tpope/vim-vinegar'
+            Plugin 'alfredodeza/jacinto.vim'
+            Plugin 'bling/vim-airline'
+            Plugin 'flazz/vim-colorschemes'
+            Plugin 'godlygeek/csapprox'
+            Plugin 'kien/ctrlp.vim'
+            Plugin 'matchit.zip'
+            Plugin 'mbbill/undotree'
+            Plugin 'regedarek/ZoomWin'
+            Plugin 'roman/golden-ratio'
+            Plugin 'sheerun/vim-polyglot'
+            Plugin 'jiangmiao/auto-pairs'
+            Plugin 'terryma/vim-multiple-cursors'
+            Plugin 'tpope/vim-commentary'
+            Plugin 'tpope/vim-surround'
+            Plugin 'tpope/vim-vinegar'
         endif
 
     " General Programming
         if count(g:two_ret_bundle_groups, 'programming')
-            Bundle 'tpope/vim-fugitive'
+            Plugin 'tpope/vim-fugitive'
             if executable('ctags')
-                Bundle 'majutsushi/tagbar'
+                Plugin 'majutsushi/tagbar'
             endif
-            Bundle 'Shougo/neocomplete.vim.git'
-            Bundle 'airblade/vim-gitgutter'
-            Bundle 'christoomey/vim-tmux-navigator'
+            Plugin 'Shougo/neocomplete.vim.git'
+            Plugin 'airblade/vim-gitgutter'
+            Plugin 'christoomey/vim-tmux-navigator'
         endif
 
     " Javascript
         if count(g:two_ret_bundle_groups, 'javascript')
-            Bundle 'elzr/vim-json'
+            Plugin 'elzr/vim-json'
         endif
 
     " HTML/HAML/CSS
         if count(g:two_ret_bundle_groups, 'html')
-            Bundle 'tpope/vim-haml'
+            Plugin 'tpope/vim-haml'
         endif
 
     " Ruby
         if count(g:two_ret_bundle_groups, 'ruby')
-            Bundle 'tpope/vim-rails'
+            Plugin 'tpope/vim-rails'
             let g:rubycomplete_buffer_loading = 1
-            Bundle 'tpope/vim-bundler'
-            Bundle 'kana/vim-textobj-user'
+            Plugin 'tpope/vim-bundler'
+            Plugin 'kana/vim-textobj-user'
         endif
 
     " Misc
         if count(g:two_ret_bundle_groups, 'misc')
-            Bundle 'mattn/gist-vim'
-            Bundle 'mattn/webapi-vim'
-            Bundle 'godlygeek/tabular'
-            Bundle 'plasticboy/vim-markdown'
+            Plugin 'mattn/gist-vim'
+            Plugin 'mattn/webapi-vim'
+            Plugin 'godlygeek/tabular'
+            Plugin 'tpope/vim-markdown'
         endif
 
     " TMUX
         if count(g:two_ret_bundle_groups, 'tmux')
-            Bundle 'jgdavey/tslime.vim'
-            Bundle 'jgdavey/vim-turbux'
+            Plugin 'jgdavey/tslime.vim'
+            Plugin 'jgdavey/vim-turbux'
+        endif
+
+    " Devops
+        if count(g:two_ret_bundle_groups, 'devops')
+            Plugin 'rodjek/vim-puppet'
         endif
     endif
 " }

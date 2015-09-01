@@ -6,7 +6,8 @@ NOTE: the project follows [Semantic Versioning](http://semver.org/).
 
 ## 1.1.0 - 2015-08-31
 
-- Replace Neocomplcache by neocomplete
+- Replaces Neocomplcache by neocomplete
+- Includes puppet plugin
 
 ## 1.0.2 - 2015-08-30
 
