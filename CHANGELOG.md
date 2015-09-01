@@ -10,6 +10,8 @@ NOTE: the project follows [Semantic Versioning](http://semver.org/).
 
 ## 1.1.0 - 2015-08-31
 
+    REQUIRES vim with lua support: https://github.com/benichu/2ret-vim#requirements
+
 - Replaces Neocomplcache by neocomplete
 - Includes puppet plugin
 - Includes roy/ctrlp-funky plugin
