@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 NOTE: the project follows [Semantic Versioning](http://semver.org/).
 
+## 1.1.2 - 2015-09-02
+
+- A bit overkill, to change line numbering on insert
+
 ## 1.1.1 - 2015-08-31
 
 - Fixes Issue #3: remap the JSON validation command to a shortcut

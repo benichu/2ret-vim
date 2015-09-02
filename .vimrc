@@ -173,10 +173,6 @@
     autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
     autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
     autocmd Filetype perl setlocal ts=4 sts=4 sw=4
-    " Let’s tell Vim to automatically use absolute line numbers when we’re in
-    " insert mode and relative numbers when we’re in normal mode:
-    autocmd InsertEnter * silent! :set norelativenumber
-    autocmd InsertLeave,BufNewFile,VimEnter * silent! :set relativenumber
 " }
 
 " Key (re)Mappings {
