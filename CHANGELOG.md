@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 NOTE: the project follows [Semantic Versioning](http://semver.org/).
 
+## 1.1.3 - 2015-09-02
+
+- Fix F12 -> F2
+
 ## 1.1.2 - 2015-09-02
 
 - A bit overkill, to change line numbering on insert

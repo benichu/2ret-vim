@@ -162,7 +162,7 @@
     set tabstop=2                   " an indentation every four columns
     set softtabstop=2               " let backspace delete indent
     "set matchpairs+=<:>                " match, to be used with %
-    set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
+    set pastetoggle=<F2>            " pastetoggle (sane indentation on pastes)
 
     " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
     au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,config.ru}    set ft=ruby
