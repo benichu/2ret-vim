@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 NOTE: the project follows [Semantic Versioning](http://semver.org/).
 
+## 1.1.4 - 2015-09-05
+
+- Fix Issue with ruby autocomplete performance when working in gems
+
 ## 1.1.3 - 2015-09-02
 
 - Fix F12 -> F2
