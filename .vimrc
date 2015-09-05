@@ -453,7 +453,9 @@
           let g:neocomplete#sources#omni#input_patterns = {}
         endif
         let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-        let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
+        " FIXME: I had to disable this, it was too slow to use in some edge case
+        " Example in a gem's engine.rb file, typing the gem's namespace then `:` causes 100% CPU
+        " let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
 
         " For snippet_complete marker.
         if has('conceal')
