@@ -130,7 +130,7 @@ To add a new bundle
     echo Bundle \'2ret-vim/vim-colors\' >> ~/.vimrc.bundles.local
 ```
 
-Then to install the new bundles:
+Then to install or update bundles and remove obsolete ones:
 ```bash
 vim +PluginInstall! +PluginClean +qall
 ```
