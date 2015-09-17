@@ -128,6 +128,12 @@ vim +PluginInstall! +PluginClean +qall
 
 Here are a few of the plugins:
 
+## [Extradite]
+
+Git commit browser for the current file. Open it with F6 and close it with `q`. If you press enter while selecting a commit, it will open the file at that point in history.
+
+You can read the full description [here](https://github.com/int3/vim-extradite).
+
 ## [Surround]
 
 This plugin is a tool for dealing with pairs of "surroundings."  Examples

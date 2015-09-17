@@ -77,6 +77,7 @@
             Plugin 'tpope/vim-commentary'
             Plugin 'tpope/vim-surround'
             Plugin 'tpope/vim-vinegar'
+            Plugin 'int3/vim-extradite'
         endif
 
     " General Programming
