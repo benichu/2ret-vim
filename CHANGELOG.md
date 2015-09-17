@@ -6,7 +6,7 @@ NOTE: the project follows [Semantic Versioning](http://semver.org/).
 
 ## 1.1.5 - 2015-09-17
 
-- Add Extradite plugin and map it to <f6>
+- Add Extradite plugin and map it to `F6`
 
 ## 1.1.4 - 2015-09-05
 
