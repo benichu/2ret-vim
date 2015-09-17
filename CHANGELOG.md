@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 NOTE: the project follows [Semantic Versioning](http://semver.org/).
 
+## 1.1.5 - 2015-09-17
+
+- Add Extradite plugin and map it to <f6>
+
 ## 1.1.4 - 2015-09-05
 
 - Fix Issue with ruby autocomplete performance when working in gems
