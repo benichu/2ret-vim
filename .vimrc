@@ -286,6 +286,10 @@
 
 " Plugins {
 
+    " Extradite {
+        nnoremap <F6> :Extradite<CR>
+    " }
+
     " Misc {
         let b:match_ignorecase = 1
     " }
