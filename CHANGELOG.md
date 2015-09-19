@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 NOTE: the project follows [Semantic Versioning](http://semver.org/).
 
+## 1.1.6 - 2015-09-19
+
+- Fix Issue #6 - multiple-cursors vs neocomplete
+
 ## 1.1.5 - 2015-09-17
 
 - Add Extradite plugin and map it to `F6`
