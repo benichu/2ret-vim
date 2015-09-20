@@ -91,12 +91,13 @@ The `leader` key is mapped to `,`
 
 * `F2`  - when you want to paste something in terminal, toggle to paste mode
 * `F5`  - toggle the undotree panel
+* `F6`  - open extradite for the current file
 * `F8`  - toggle the tagbar panel
 * `F12` - validate the current buffer as json
 
 ### Vim in the Terminal with [Tmux](https://tmux.github.io/)
 
-    TODO: Ticks, gotchas (cut/paste, etc...)
+    TODO: Tricks, gotchas (cut/paste, etc...)
 
 ## Customization
 
