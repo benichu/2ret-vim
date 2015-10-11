@@ -60,7 +60,10 @@
 " }
 
 " General {
-    set nomodeline
+    set modelines=1
+    set ttyfast
+    set ttimeout
+    set ttimeoutlen=100
     filetype plugin indent on   " Automatically detect file types.
     syntax on                   " syntax highlighting
     set mouse=a                 " automatically enable mouse usage
@@ -132,7 +135,6 @@
                                     " selected characters/lines in visual mode
     endif
 
-    set modelines=1
     set backspace=indent,eol,start  " backspace for dummies
     set linespace=0                 " No extra spaces between rows
     set relativenumber              " User relative numbers by default
