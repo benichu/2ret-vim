@@ -101,6 +101,7 @@
     let g:solarized_contrast="high"
     let g:solarized_visibility="high"
 
+    set lazyredraw                  " redraw only when we need to
     set tabpagemax=15               " only show 15 tabs
     set showmode                    " display the current mode
 
@@ -131,6 +132,7 @@
                                     " selected characters/lines in visual mode
     endif
 
+    set modelines=1
     set backspace=indent,eol,start  " backspace for dummies
     set linespace=0                 " No extra spaces between rows
     set relativenumber              " User relative numbers by default
@@ -147,6 +149,8 @@
     set scrolljump=5                " lines to scroll when cursor leaves screen
     set scrolloff=3                 " minimum lines to keep above and below cursor
     set foldenable                  " auto fold code
+    set foldlevelstart=10           " open most folds by default
+    set foldnestmax=10              " 10 nested fold max
     set list
     " List chars
     set listchars=""                  " Reset the listchars
@@ -159,9 +163,8 @@
     set autoindent                  " indent at the same level of the previous line
     set shiftwidth=2                " use indents of 2 spaces
     set expandtab                   " tabs are spaces, not tabs
-    set tabstop=2                   " an indentation every four columns
-    set softtabstop=2               " let backspace delete indent
-    "set matchpairs+=<:>                " match, to be used with %
+    set tabstop=2                   " number of visual spaces per TAB
+    set softtabstop=2               " number of spaces in tab when editing
     set pastetoggle=<F2>            " pastetoggle (sane indentation on pastes)
 
     " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
