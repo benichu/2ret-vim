@@ -1,5 +1,4 @@
 " Modeline and Notes {
-" vim: set foldmarker={,} foldlevel=0 foldmethod=marker:
 "
 "    #######  ########  ######## ########         ##     ## #### ##     ##
 "   ##     ## ##     ## ##          ##            ##     ##  ##  ###   ###
@@ -134,3 +133,4 @@
     set shortmess+=filmnrxoOtT      " abbrev. of messages (avoids 'hit enter')
 " }
 "
+" vim: set foldmarker={,} foldlevel=0 foldmethod=marker:

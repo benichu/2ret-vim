@@ -1,5 +1,4 @@
 " Modeline and Notes {
-" vim: set foldmarker={,} foldlevel=0 foldmethod=marker:
 "
 "    #######  ########  ######## ########         ##     ## #### ##     ##
 "   ##     ## ##     ## ##          ##            ##     ##  ##  ###   ###
@@ -28,7 +27,6 @@
     " }
 
     " Basics {
-        set nocompatible        " must be first line
         if !WINDOWS()
             set shell=/bin/sh
         else
@@ -610,3 +608,4 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 "" FIXME: Needs to be applied last, or does not work.
 set background=dark         " Assume a dark background
+" vim: set foldmarker={,} foldlevel=0 foldmethod=marker:
