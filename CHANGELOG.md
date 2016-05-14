@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file.
 
 NOTE: the project follows [Semantic Versioning](http://semver.org/).
 
+## 1.2.0 - 2016-05-14
+
+Lot of cleanup and new or updated plugins, PLEASE READ BEFORE INSTALLING!
+
+- Add [.editorconfig](http://editorconfig.org/) support
+- No more backup or swap files
+- Remove Tabularize shortcuts
+- Improve opening large files
+- Yank Without Jank: http://ddrscott.github.io/blog/2016/yank-without-jank/
+- Remove Plugin: [vim-airline](https://github.com/vim-airline/vim-airline)
+- Remove Plugin: [vim-extradite](https://github.com/int3/vim-extradite)
+- Remove some file formatting plugins made redundant by
+  [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot)
+- New plugin: [Rainbow Parentheses](https://github.com/luochen1990/rainbow)
+- New plugin: [vim-endwise](https://github.com/tpope/vim-endwise)
+- New plugin: [itchyny/lightline.vim](https://github.com/itchyny/lightline.vim),
+  replace `vim-airline`
+
 ## 1.1.6 - 2015-09-19
 
 - Fix Issue #6 - multiple-cursors vs neocomplete
