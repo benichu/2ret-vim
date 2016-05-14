@@ -7,7 +7,7 @@
 The distribution is completely customisable using a `~/.vimrc.local`
 and `~/.vimrc.bundles.local` Vim RC files.
 
-# INSTALLATION (Linux, *nix, Mac OSX Installation)
+# INSTALLATION (Linux, Mac OSX Installation)
 
 The easiest way to install 2ret-vim is to use our [automatic installer](http://2ret.com/vim)
 by simply copying and pasting the following line into a terminal.
@@ -129,12 +129,6 @@ vim +PluginInstall! +PluginClean +qall
 
 Here are a few of the plugins:
 
-## [Extradite]
-
-Git commit browser for the current file. Open it with F6 and close it with `q`. If you press enter while selecting a commit, it will open the file at that point in history.
-
-You can read the full description [here](https://github.com/int3/vim-extradite).
-
 ## [Surround]
 
 This plugin is a tool for dealing with pairs of "surroundings."  Examples
@@ -165,13 +159,13 @@ vinegar.vim enhances [netrw](http://vimcasts.org/episodes/the-file-explorer/), p
 
 ## [Vim-commentary]
 
-**QuickStart** `\\\` to comment or uncomment a text selection
+**QuickStart** `gcc` to comment or uncomment a text selection
 
 Want to comment 3 lines? Try `3gcc`
 
-## [Neocomplcache]
+## [Neocomplete]
 
-NeoComplCache is an autocomplete plugin.
+Neocomplete is an autocomplete plugin.
 It can complete simultaniously from the dictionary, buffer, omnicomplete.
 
 **QuickStart** Just start typing, it will autocomplete where possible
@@ -203,15 +197,9 @@ file
  * `<leader>gb` :Gblame<CR>
  * `<leader>gl` :Glog<CR>
  * `<leader>gp` :Git push<CR>
- * :Git ___ will pass anything along to git.
+ * :Git will pass anything along to git.
 
 For more: [vimcast: Fugitive](http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/)
-
-## [Vim-airline]
-
-Lean & mean statusline for vim that's light as air (100% vimscript).
-
-![vim-airline image][vim-airline-img]
 
 ## [Vim-multiple-cursors]
 
@@ -361,13 +349,12 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 [Fugitive]:http://github.com/tpope/vim-fugitive
 [Gist]:https://github.com/mattn/gist-vim
 [Gundo]:https://github.com/sjl/gundo.vim
-[Matchit]:http://www.vim.org/scripts/script.php?script_id=39
-[Neocomplcache]:http://github.com/Shougo/neocomplcache
+[Matchit]:"http://www.vim.org/scripts/script.php?script_id=39
+[Neocomplete]:https://github.com/Shougo/neocomplete.vim
 [Surround]:https://github.com/tpope/vim-surround
 [Tabularize]:http://github.com/godlygeek/tabular
 [Tagbar]:http://github.com/majutsushi/tagbar
 [Undotree]:https://github.com/mbbill/undotree
-[Vim-airline]:https://github.com/bling/vim-airline
 [Vim-commentary]:http://github.com/tpope/vim-commentary
 [Vim-vinegar]:http://github.com/tpope/vim-vinegar
 [Vim-multiple-cursors]:https://github.com/terryma/vim-multiple-cursors
@@ -375,9 +362,8 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 [ZoomWin]:https://github.com/vim-scripts/ZoomWin
 [Turbux]:http://joshuadavey.com/2012/01/10/faster-tdd-feedback-with-tmux-tslime-vim-and-turbux
 
-[2ret-vim-img-1]:http://i.imgur.com/bCtak.png
-[2ret-vim-vimrc]:http://i.imgur.com/g4NQI.png
-[vim-airline-img]:http://imgur.com/GIh5ARI.jpg
+[2ret-vim-img-1]:http://storage.thouret.com.s3.amazonaws.com/monosnap/1._tmux_2016-05-14_09-16-41.png
+[2ret-vim-vimrc]:http://storage.thouret.com.s3.amazonaws.com/monosnap/1._tmux_2016-05-14_09-14-24.png
 [vim-cheatsheet]:http://i.imgur.com/PQQrd.png
 [vim-key-mapping-img]:http://i.imgur.com/hP67T.png
 [vim-multiple-cursors-img]:http://i.imgur.com/ajqUJM2.gif

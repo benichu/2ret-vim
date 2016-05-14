@@ -30,7 +30,6 @@
 " Plugins {
     " Deps
         Plugin 'gmarik/vundle'
-        Plugin 'MarcWeber/vim-addon-mw-utils'
         Plugin 'tomtom/tlib_vim'
         if executable('ag')
             Plugin 'mileszs/ack.vim'
@@ -61,22 +60,27 @@
     " General
         if count(g:two_ret_bundle_groups, 'general')
             Plugin 'alfredodeza/jacinto.vim'
-            Plugin 'bling/vim-airline'
+            Plugin 'editorconfig/editorconfig-vim'
             Plugin 'flazz/vim-colorschemes'
             Plugin 'godlygeek/csapprox'
+            Plugin 'itchyny/lightline.vim'
+            Plugin 'jiangmiao/auto-pairs'
             Plugin 'kien/ctrlp.vim'
-            Plugin 'tacahiroy/ctrlp-funky'
             Plugin 'matchit.zip'
             Plugin 'mbbill/undotree'
             Plugin 'regedarek/ZoomWin'
             Plugin 'roman/golden-ratio'
             Plugin 'sheerun/vim-polyglot'
-            Plugin 'jiangmiao/auto-pairs'
+            Plugin 'tacahiroy/ctrlp-funky'
             Plugin 'terryma/vim-multiple-cursors'
             Plugin 'tpope/vim-commentary'
+            Plugin 'tpope/vim-markdown'
             Plugin 'tpope/vim-surround'
             Plugin 'tpope/vim-vinegar'
-            Plugin 'int3/vim-extradite'
+            " read your .gitignore file from the directory where you launch vim and parse
+            " it, transforming its format into one suitable for wildignore, and then set
+            " that option
+            Plugin 'vim-scripts/gitignore'
         endif
 
     " General Programming
@@ -88,6 +92,8 @@
             Plugin 'Shougo/neocomplete.vim.git'
             Plugin 'airblade/vim-gitgutter'
             Plugin 'christoomey/vim-tmux-navigator'
+            Plugin 'luochen1990/rainbow'
+            Plugin 'tpope/vim-endwise'
         endif
 
     " Javascript
@@ -95,17 +101,11 @@
             Plugin 'elzr/vim-json'
         endif
 
-    " HTML/HAML/CSS
-        if count(g:two_ret_bundle_groups, 'html')
-            Plugin 'tpope/vim-haml'
-        endif
-
     " Ruby
         if count(g:two_ret_bundle_groups, 'ruby')
             Plugin 'tpope/vim-rails'
             let g:rubycomplete_buffer_loading = 1
             Plugin 'tpope/vim-bundler'
-            Plugin 'kana/vim-textobj-user'
         endif
 
     " Misc
@@ -113,18 +113,12 @@
             Plugin 'mattn/gist-vim'
             Plugin 'mattn/webapi-vim'
             Plugin 'godlygeek/tabular'
-            Plugin 'plasticboy/vim-markdown'
         endif
 
     " TMUX
         if count(g:two_ret_bundle_groups, 'tmux')
             Plugin 'jgdavey/tslime.vim'
             Plugin 'jgdavey/vim-turbux'
-        endif
-
-    " Devops
-        if count(g:two_ret_bundle_groups, 'devops')
-            Plugin 'rodjek/vim-puppet'
         endif
     endif
 " }

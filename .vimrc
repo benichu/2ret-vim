@@ -84,17 +84,42 @@
     set nospell                     " no spelling
     set hidden                      " allow buffer switching without saving
 
+    " Start paste mode with F10 to prevent console Vim from confusing a swathe of
+    " pre-formatted pasted text with actual keyboard input, and thereby attempting
+    " to indent it inappropriately. If unimpaired.vim is available, it's generally
+    " nicer to use yp, yP, yo, yO, etc.
+    set nopaste
+    nnoremap <F2> :set invpaste paste?<CR>
+    set pastetoggle=<F2>
+
     " Setting up the directories
-    set backup                      " backups are nice ...
+    set nobackup
+    set nowritebackup
+    set noswapfile
     if has('persistent_undo')
         set undofile                "so is persistent undo ...
         set undolevels=1000         "maximum number of changes that can be undone
         set undoreload=10000        "maximum number lines to save for undo on a buffer reload
     endif
 
+    " Reload file without prompting if it has changed on disk.
+    " Will still prompt if there is unsaved text in the buffer.
+    set autoread
+    " MacVim checks for autoread when it gains focus; terminal Vim
+    " must trigger checks. Do so when switching buffers, or after
+    " 2 secs (the value of updatetime) of pressing nothing.
+    set updatetime=2000
+    au WinEnter,BufWinEnter,CursorHold * silent! checktime
 " }
 
 " Vim UI {
+    " http://snk.tuxfamily.org/log/vim-256color-bce.html
+    " Disable Background Color Erase (BCE) so that color schemes
+    " work properly when Vim is used inside tmux and GNU screen.
+    if &term =~ '256color'
+      set t_ut=
+    endif
+
     " Default theme is solarized
     let g:solarized_termcolors=256
     colorscheme solarized
@@ -103,6 +128,7 @@
     let g:solarized_visibility="high"
 
     set lazyredraw                  " redraw only when we need to
+    set expandtab                   " tabs are spaces, not tabs
     set tabpagemax=15               " only show 15 tabs
     set showmode                    " display the current mode
 
@@ -162,10 +188,8 @@
     set nowrap                      " wrap long lines
     set autoindent                  " indent at the same level of the previous line
     set shiftwidth=2                " use indents of 2 spaces
-    set expandtab                   " tabs are spaces, not tabs
     set tabstop=2                   " number of visual spaces per TAB
     set softtabstop=2               " number of spaces in tab when editing
-    set pastetoggle=<F2>            " pastetoggle (sane indentation on pastes)
 
     " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
     au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,config.ru}    set ft=ruby
@@ -176,6 +200,7 @@
     autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
     autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
     autocmd Filetype perl setlocal ts=4 sts=4 sw=4
+    autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " }
 
 " Key (re)Mappings {
@@ -193,6 +218,12 @@
     " Wrapped lines goes down/up to next row, rather than next line in file.
     nnoremap j gj
     nnoremap k gk
+
+    " Warning: Yank without moving cursor! Awesome Sauce!
+    "          exit visual mode, my=mark y, last visual selection, y, go to mark
+    " Thanks: http://ddrscott.github.io/blog/2016/yank-without-jank/#comment-2643800118
+    vnoremap <expr>y 'my"' . v:register . 'y`y'
+    vnoremap <expr>Y 'my"' . v:register . 'Y`y'
 
     " disable cursor keys in normal mode
     map <Left>  :echo "use h!"<cr>
@@ -280,21 +311,24 @@
     " switch between the currently open buffer and the
     " previous one
     nnoremap <leader><leader> <c-^>
-
-
-    "" Paste/Nopaste Switcher
-    nnoremap <F2> :set invpaste paste?<CR>
-    set pastetoggle=<F2>
 " }
 
 " Plugins {
 
-    " Extradite {
-        nnoremap <F6> :Extradite<CR>
+    " EditorConfig {
+        let g:EditorConfig_exclude_patterns = ['fugitive://.*']
     " }
 
     " Misc {
         let b:match_ignorecase = 1
+    " }
+
+    " Markdown {
+        let g:markdown_fenced_languages = ['coffee', 'css', 'bash=sh', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml', 'html']
+    " }
+
+    " Rainbow Parens {
+        let g:rainbow_active = 1
     " }
 
     " UndoTree {
@@ -343,17 +377,6 @@
 
     " Tabularize {
         if exists(":Tabularize")
-          nmap <leader>a= :Tabularize /=<CR>
-          vmap <leader>a= :Tabularize /=<CR>
-          nmap <leader>a: :Tabularize /:<CR>
-          vmap <leader>a: :Tabularize /:<CR>
-          nmap <leader>a:: :Tabularize /:\zs<CR>
-          vmap <leader>a:: :Tabularize /:\zs<CR>
-          nmap <leader>a, :Tabularize /,<CR>
-          vmap <leader>a, :Tabularize /,<CR>
-          nmap <leader>a<Bar> :Tabularize /<Bar><CR>
-          vmap <leader>a<Bar> :Tabularize /<Bar><CR>
-
           " The following function automatically aligns when typing a
           " supported character
           inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
@@ -380,7 +403,7 @@
         let g:ctrlp_dotfiles = 0 " don’t want to search for dotfiles and dotdirs
         let g:ctrlp_mruf_relative = 1 " show only MRU files in the working directory
         let g:ctrlp_custom_ignore = {
-              \ 'dir':  '\.git$\|\.hg$\|\.svn$\|tmp$\|db/sphinx/*\|\.build$\|build$\|Build$\|dist$\|\.cache$\|cache$\|*cache$\|Cache$\|_site$\|node_modules$\|bower_components$\|docco$',
+              \ 'dir':  '\.git$\|\.hg$\|\.svn$\|tmp$\|db/sphinx/*\|\.build$\|build$\|Build$\|dist$\|\.cache$\|cache$\|*cache$\|Cache$\|_site$\|node_modules$\|target$\|out$\|bower_components$\|docco$',
               \ 'file': '\.log$\|\.pid$\|\.png$\|\.jpg$\|\.gif$\|\.class$\|\.pyc$\|\.tar.gz|\.swp$\|tags|\.tags$',
               \ }
         " ctrlp Funky
@@ -469,9 +492,6 @@
             set conceallevel=2 concealcursor=i
         endif
 
-        "" vim-airline
-        let g:airline_powerline_fonts = 1
-
         "" vim-markdown
         let g:vim_markdown_folding_disabled=1
 
@@ -551,9 +571,7 @@ function! InitializeDirectories()
     let separator = "."
     let parent = $HOME
     let prefix = '.vim'
-    let dir_list = {
-                \ 'backup': 'backupdir',
-                \ 'swap': 'directory' }
+    let dir_list = { }
 
     if has('persistent_undo')
         let dir_list['undo'] = 'undodir'
@@ -567,7 +585,7 @@ function! InitializeDirectories()
             endif
         endif
         if !isdirectory(directory)
-            echo "Warning: Unable to create backup directory: " . directory
+            echo "Warning: Unable to create directory: " . directory
             echo "Try: mkdir -p " . directory
         else
             let directory = substitute(directory, " ", "\\\\ ", "g")
@@ -605,6 +623,35 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
     endif
 " }
 "
+
+" When opening a large file, take some measures to keep things loading quickly
+if has('eval') && has('autocmd')
+
+  " Threshold is 10 MB in size
+  let g:bigfilesize = 10 * 1024 * 1024
+
+  " Declare function for turning off slow options
+  function! BigFileMeasures()
+    let l:file = expand("<afile>")
+    if getfsize(l:file) > g:bigfilesize
+      setlocal nobackup
+      setlocal nowritebackup
+      setlocal noswapfile
+      if has('persistent_undo')
+        setlocal noundofile
+      endif
+      if exists('&synmaxcol')
+        setlocal synmaxcol=256
+      endif
+    endif
+  endfunction
+
+  " Define autocmd for calling to check filesize
+  augroup bigfilesize
+    autocmd!
+    autocmd BufReadPre * call BigFileMeasures()
+  augroup end
+endif
 
 "" FIXME: Needs to be applied last, or does not work.
 set background=dark         " Assume a dark background
