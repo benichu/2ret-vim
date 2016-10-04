@@ -67,6 +67,8 @@
     set mouse=a                 " automatically enable mouse usage
     set visualbell              " do not beep
     scriptencoding utf-8
+    " Project's vimrc
+    set exrc
 
     if $TMUX == '' " Fix for `E353: Nothing in register *` when using vim inside tmux
       if LINUX()   " On Linux use + register for copy-paste
@@ -403,7 +405,7 @@
         let g:ctrlp_dotfiles = 0 " don’t want to search for dotfiles and dotdirs
         let g:ctrlp_mruf_relative = 1 " show only MRU files in the working directory
         let g:ctrlp_custom_ignore = {
-              \ 'dir':  '\.git$\|\.hg$\|\.svn$\|tmp$\|db/sphinx/*\|\.build$\|build$\|Build$\|dist$\|\.cache$\|cache$\|*cache$\|Cache$\|_site$\|node_modules$\|target$\|out$\|bower_components$\|docco$',
+              \ 'dir':  '\.git$\|\.hg$\|\.svn$\|tmp$\|db/sphinx/*\|\.build$\|build$\|Build$\|dist$\|\.cache$\|cache$\|*cache$\|Cache$\|_site$\|node_modules$\|target$\|_yardoc$\|out$\|bower_components$\|docco$',
               \ 'file': '\.log$\|\.pid$\|\.png$\|\.jpg$\|\.gif$\|\.class$\|\.pyc$\|\.tar.gz|\.swp$\|tags|\.tags$',
               \ }
         " ctrlp Funky
@@ -655,4 +657,5 @@ endif
 
 "" FIXME: Needs to be applied last, or does not work.
 set background=dark         " Assume a dark background
+set secure
 " vim: set foldmarker={,} foldlevel=0 foldmethod=marker:
