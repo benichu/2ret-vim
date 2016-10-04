@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 NOTE: the project follows [Semantic Versioning](http://semver.org/).
 
+## 1.2.1 - 2016-10-04
+
+- Allow project .vimrc and exclude yardoc folders from ctrlp
+
 ## 1.2.0 - 2016-05-14
 
 Lot of cleanup and new or updated plugins, PLEASE READ BEFORE INSTALLING!
