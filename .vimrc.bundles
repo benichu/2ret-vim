@@ -68,15 +68,17 @@
             Plugin 'kien/ctrlp.vim'
             Plugin 'matchit.zip'
             Plugin 'mbbill/undotree'
-            Plugin 'regedarek/ZoomWin'
+            " Plugin 'regedarek/ZoomWin'
+            "Plugin 'troydm/zoomwintab.vim'
             Plugin 'roman/golden-ratio'
             Plugin 'sheerun/vim-polyglot'
             Plugin 'tacahiroy/ctrlp-funky'
-            Plugin 'terryma/vim-multiple-cursors'
+            " Plugin 'mg979/vim-visual-multi'
+            " Plugin 'terryma/vim-multiple-cursors'
             Plugin 'tpope/vim-commentary'
-            Plugin 'tpope/vim-markdown'
+            " Plugin 'tpope/vim-markdown'
             Plugin 'tpope/vim-surround'
-            Plugin 'tpope/vim-vinegar'
+            " Plugin 'tpope/vim-vinegar'
             " read your .gitignore file from the directory where you launch vim and parse
             " it, transforming its format into one suitable for wildignore, and then set
             " that option
@@ -87,9 +89,14 @@
         if count(g:two_ret_bundle_groups, 'programming')
             Plugin 'tpope/vim-fugitive'
             if executable('ctags')
-                Plugin 'majutsushi/tagbar'
+              Plugin 'majutsushi/tagbar'
+              let g:deoplete#enable_at_startup = 1
             endif
-            Plugin 'Shougo/neocomplete.vim.git'
+            if has('nvim')
+              Plugin 'Shougo/deoplete.nvim'
+            else
+              Plugin 'Shougo/neocomplete.vim.git'
+            endif
             Plugin 'airblade/vim-gitgutter'
             Plugin 'christoomey/vim-tmux-navigator'
             Plugin 'luochen1990/rainbow'

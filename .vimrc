@@ -1,16 +1,3 @@
-" Modeline and Notes {
-"
-"    #######  ########  ######## ########         ##     ## #### ##     ##
-"   ##     ## ##     ## ##          ##            ##     ##  ##  ###   ###
-"          ## ##     ## ##          ##            ##     ##  ##  #### ####
-"    #######  ########  ######      ##    ####### ##     ##  ##  ## ### ##
-"   ##        ##   ##   ##          ##             ##   ##   ##  ##     ##
-"   ##        ##    ##  ##          ##              ## ##    ##  ##     ##
-"   ######### ##     ## ########    ##               ###    #### ##     ##
-"
-"   This is the personal .vimrc file of Ben Thouret.
-"
-" }
 "
 " Environment {
 
@@ -41,7 +28,9 @@
         set rtp+=~/.vim/bundle/vundle
         call vundle#rc()
     " }
-
+    " Python support (neovim + deoplete)
+    let g:python_host_prog = '/Users/bthouret/.pyenv/versions/neovim2/bin/python'
+    let g:python3_host_prog = '/Users/bthouret/.pyenv/versions/neovim3/bin/python'
 " }
 
 " Bundles {
@@ -342,8 +331,8 @@
         nnoremap <F12> :Jacinto validate<CR>
     " }
 
-    " ZoomWin {
-        map <leader>z :ZoomWin<CR>
+    " ZoomWinTab {
+        " map <leader>z :ZoomWinTabToggle<CR>
     " }
 
     " Ctags {
@@ -405,7 +394,7 @@
         let g:ctrlp_dotfiles = 0 " don’t want to search for dotfiles and dotdirs
         let g:ctrlp_mruf_relative = 1 " show only MRU files in the working directory
         let g:ctrlp_custom_ignore = {
-              \ 'dir':  '\.git$\|\.hg$\|\.svn$\|tmp$\|db/sphinx/*\|\.build$\|build$\|Build$\|dist$\|\.cache$\|cache$\|*cache$\|Cache$\|_site$\|node_modules$\|target$\|_yardoc$\|out$\|bower_components$\|docco$',
+              \ 'dir':  '\.git$\|\.hg$\|\.svn$\|tmp$\|db/sphinx/*\|\.build$\|build$\|Build$\|dist$\|\.cache$\|cache$\|*cache$\|Cache$\|_site$\|node_modules$\|target$\|_yardoc$\|out$\|bower_components$\|app\_doc$\',
               \ 'file': '\.log$\|\.pid$\|\.png$\|\.jpg$\|\.gif$\|\.class$\|\.pyc$\|\.tar.gz|\.swp$\|tags|\.tags$',
               \ }
         " ctrlp Funky
@@ -430,87 +419,87 @@
         nnoremap <silent> <leader>gg :GitGutterToggle<CR>
      "}
 
-     " neocomplete {
-        let g:acp_enableAtStartup = 0
-        let g:neocomplete#enable_at_startup = 1
-        let g:neocomplete#enable_smart_case = 1
-        let g:neocomplete#enable_auto_delimiter = 1
-        let g:neocomplete#max_list = 15
-        let g:neocomplete#force_overwrite_completefunc = 1
-        " Set minimum syntax keyword length.
-        let g:neocomplete#sources#syntax#min_keyword_length = 3
-        let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+     " " neocomplete {
+     "    let g:acp_enableAtStartup = 0
+     "    let g:neocomplete#enable_at_startup = 1
+     "    let g:neocomplete#enable_smart_case = 1
+     "    let g:neocomplete#enable_auto_delimiter = 1
+     "    let g:neocomplete#max_list = 15
+     "    let g:neocomplete#force_overwrite_completefunc = 1
+     "    " Set minimum syntax keyword length.
+     "    let g:neocomplete#sources#syntax#min_keyword_length = 3
+     "    let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
-        " Define dictionary.
-        let g:neocomplete#sources#dictionary#dictionaries = {
-            \ 'default' : '',
-            \ 'vimshell' : $HOME.'/.vimshell_hist',
-            \ 'scheme' : $HOME.'/.gosh_completions'
-                \ }
+     "    " Define dictionary.
+     "    let g:neocomplete#sources#dictionary#dictionaries = {
+     "        \ 'default' : '',
+     "        \ 'vimshell' : $HOME.'/.vimshell_hist',
+     "        \ 'scheme' : $HOME.'/.gosh_completions'
+     "            \ }
 
-        " Define keyword.
-        if !exists('g:neocomplete#keyword_patterns')
-            let g:neocomplete#keyword_patterns = {}
-        endif
-        let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+     "    " Define keyword.
+     "    if !exists('g:neocomplete#keyword_patterns')
+     "        let g:neocomplete#keyword_patterns = {}
+     "    endif
+     "    let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
-        " Plugin key-mappings.
-        inoremap <expr><C-g>     neocomplete#undo_completion()
-        inoremap <expr><C-l>     neocomplete#complete_common_string()
+     "    " Plugin key-mappings.
+     "    inoremap <expr><C-g>     neocomplete#undo_completion()
+     "    inoremap <expr><C-l>     neocomplete#complete_common_string()
 
-        " Recommended key-mappings.
-        " <CR>: close popup and save indent.
-        inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-        function! s:my_cr_function()
-          return pumvisible() ? neocomplete#close_popup() : "\<CR>"
-        endfunction
-        " <TAB>: completion.
-        inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-        " <C-h>, <BS>: close popup and delete backword char.
-        inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-        inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-        inoremap <expr><C-y>  neocomplete#close_popup()
-        inoremap <expr><C-e>  neocomplete#cancel_popup()
+     "    " Recommended key-mappings.
+     "    " <CR>: close popup and save indent.
+     "    inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+     "    function! s:my_cr_function()
+     "      return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+     "    endfunction
+     "    " <TAB>: completion.
+     "    inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+     "    " <C-h>, <BS>: close popup and delete backword char.
+     "    inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+     "    inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+     "    inoremap <expr><C-y>  neocomplete#close_popup()
+     "    inoremap <expr><C-e>  neocomplete#cancel_popup()
 
-        " Enable omni completion.
-        autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-        autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-        autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-        autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-        autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-        autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+     "    " Enable omni completion.
+     "    autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+     "    autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+     "    autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+     "    autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+     "    autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+     "    autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
-        " Enable heavy omni completion.
-        if !exists('g:neocomplete#sources#omni#input_patterns')
-          let g:neocomplete#sources#omni#input_patterns = {}
-        endif
-        let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-        " FIXME: I had to disable this, it was too slow to use in some edge case
-        " Example in a gem's engine.rb file, typing the gem's namespace then `:` causes 100% CPU
-        " let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
+     "    " Enable heavy omni completion.
+     "    if !exists('g:neocomplete#sources#omni#input_patterns')
+     "      let g:neocomplete#sources#omni#input_patterns = {}
+     "    endif
+     "    let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+     "    " FIXME: I had to disable this, it was too slow to use in some edge case
+     "    " Example in a gem's engine.rb file, typing the gem's namespace then `:` causes 100% CPU
+     "    " let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
 
-        " For snippet_complete marker.
-        if has('conceal')
-            set conceallevel=2 concealcursor=i
-        endif
+     "    " For snippet_complete marker.
+     "    if has('conceal')
+     "        set conceallevel=2 concealcursor=i
+     "    endif
 
         "" vim-markdown
         let g:vim_markdown_folding_disabled=1
 
         "" multiple-cursors
         " Called once right before you start selecting multiple cursors
-        function! Multiple_cursors_before()
-          if exists(':NeoCompleteLock')==2
-            exe 'NeoCompleteLock'
-          endif
-        endfunction
+        " function! Multiple_cursors_before()
+        "   if exists(':NeoCompleteLock')==2
+        "     exe 'NeoCompleteLock'
+        "   endif
+        " endfunction
 
-        " Called once only when the multiple selection is canceled (default <Esc>)
-        function! Multiple_cursors_after()
-          if exists(':NeoCompleteUnlock')==2
-            exe 'NeoCompleteUnlock'
-          endif
-        endfunction
+        " " Called once only when the multiple selection is canceled (default <Esc>)
+        " function! Multiple_cursors_after()
+        "   if exists(':NeoCompleteUnlock')==2
+        "     exe 'NeoCompleteUnlock'
+        "   endif
+        " endfunction
 
         " TMUX
         if count(g:two_ret_bundle_groups, 'tmux')
