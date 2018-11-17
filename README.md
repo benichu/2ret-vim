@@ -20,17 +20,13 @@ This will install 2ret-vim and backup your existing vim configuration.
 ## Requirements:
 
 * git (ex: ubuntu `apt-get install git-core`)
-* vim 7.4+ _with lua support_
+* nvim 0.3.1+ _with lua and python support_
 * curl
-
-> __IMPORTANT:__
-> To make all the plugins work, specifically [neocomplete](https://github.com/Shougo/neocomplete.vim),
-> you need [vim with lua](https://github.com/Shougo/neocomplete.vim#requirements).
 
 On Mac OSX, with homebrew, you would do something like this to reinstall your terminal vim with lua support:
 
 ```bash
-$ brew update && brew uninstall --force vim && brew install vim --with-lua
+$ brew install neovim
 ```
 
 ## Updating to the latest version
@@ -65,7 +61,7 @@ It fixes many of the inconveniences of vanilla vim including
  * Fixes common typos like :W, :Q, etc
  * Setup a solid set of settings for Formatting (change to meet your needs)
  * Setup the interface to take advantage of vim's features including
-   * omnicomplete
+   * code completion
    * line numbers
    * syntax highlighting
    * A better ruler & status line
@@ -151,19 +147,13 @@ For instance, if the cursor was inside `"foo bar"`, you could type
 
 There's a lot more, check it out at `:help surround`
 
-## [Vim-vinegar]
-
-vinegar.vim enhances [netrw](http://vimcasts.org/episodes/the-file-explorer/), partially in an attempt to mitigate the need for more disruptive "project drawer" style plugins.
-
-**QuickStart** Press `-` in any buffer to hop up to the directory listing and seek to the file you just came from.
-
 ## [Vim-commentary]
 
 **QuickStart** `gcc` to comment or uncomment a text selection
 
 Want to comment 3 lines? Try `3gcc`
 
-## [Neocomplete]
+## [Deoplete]
 
 Neocomplete is an autocomplete plugin.
 It can complete simultaniously from the dictionary, buffer, omnicomplete.
@@ -201,19 +191,14 @@ file
 
 For more: [vimcast: Fugitive](http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/)
 
-## [Vim-multiple-cursors]
+## [Multiple Cursors](https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db)
 
-A great plugin for quick refactoring!
+> No plugins required
 
-![vim-multiple-cursors image][vim-multiple-cursors-img]
-
-**QuickStart** `<CTRL-n>`
-
-Out of the box, all you need to know is a single key `Ctrl-n`. Pressing the key in Normal mode highlights the current word under the cursor in Visual mode and places a virtual cursor at the end of it. Pressing it again finds the next ocurrence and places another virtual cursor at the end of the visual selection. If you select multiple lines in Visual mode, pressing the key puts a virtual cursor at every line and leaves you in Normal mode.
-
-After you've marked all your locations with `Ctrl-n`, you can change the visual selection with normal Vim motion commands in Visual mode. You could go to Normal mode by pressing `v` and wield your motion commands there. Single key command to switch to Insert mode such as `c` or `s` from Visual mode or `i`, `a`, `I`, `A` in Normal mode should work without any issues.
-
-At any time, you can press `<Esc>` to exit back to regular Vim.
+In vim selecting and editing is one step. This can be done with the `gn` text-object.
+Normally you will search for a word you want to change and the change the next found occurrence with `cgn` once
+and then use vim’s most powerful command the `. (dot)`.
+Using `.` you can apply the change to the next word or skip one word with n which will jump to the next word.
 
 ## [Ack.vim]
 
@@ -242,13 +227,6 @@ to jump to it's definition.
     ex: macos `brew install ctags && sudo mv /usr/bin/ctags /usr/bin/ctags.bak`
 
     Run ctags -R in project root to generate tags
-
-## [ZoomWin]
-
-Quickly make the current window zooms into a full screen and when done,
-restore the previous set of windows.
-
-**QuickStart** `<leader>z`
 
 ## [Ctrlp.vim]
 
@@ -355,15 +333,11 @@ Strongly inspired by [spf13-vim : Steve Francia's Vim Distribution](https://gith
 [Tabularize]:http://github.com/godlygeek/tabular
 [Tagbar]:http://github.com/majutsushi/tagbar
 [Undotree]:https://github.com/mbbill/undotree
-[Vim-commentary]:http://github.com/tpope/vim-commentary
 [Vim-vinegar]:http://github.com/tpope/vim-vinegar
-[Vim-multiple-cursors]:https://github.com/terryma/vim-multiple-cursors
 [Vundle]:http://github.com/gmarik/vundle
-[ZoomWin]:https://github.com/vim-scripts/ZoomWin
 [Turbux]:http://joshuadavey.com/2012/01/10/faster-tdd-feedback-with-tmux-tslime-vim-and-turbux
 
 [2ret-vim-img-1]:http://storage.thouret.com.s3.amazonaws.com/monosnap/1._tmux_2016-05-14_09-16-41.png
 [2ret-vim-vimrc]:http://storage.thouret.com.s3.amazonaws.com/monosnap/1._tmux_2016-05-14_09-14-24.png
 [vim-cheatsheet]:http://i.imgur.com/PQQrd.png
 [vim-key-mapping-img]:http://i.imgur.com/hP67T.png
-[vim-multiple-cursors-img]:http://i.imgur.com/ajqUJM2.gif

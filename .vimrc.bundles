@@ -68,17 +68,13 @@
             Plugin 'kien/ctrlp.vim'
             Plugin 'matchit.zip'
             Plugin 'mbbill/undotree'
-            " Plugin 'regedarek/ZoomWin'
-            "Plugin 'troydm/zoomwintab.vim'
             Plugin 'roman/golden-ratio'
             Plugin 'sheerun/vim-polyglot'
             Plugin 'tacahiroy/ctrlp-funky'
             " Plugin 'mg979/vim-visual-multi'
             " Plugin 'terryma/vim-multiple-cursors'
             Plugin 'tpope/vim-commentary'
-            " Plugin 'tpope/vim-markdown'
             Plugin 'tpope/vim-surround'
-            " Plugin 'tpope/vim-vinegar'
             " read your .gitignore file from the directory where you launch vim and parse
             " it, transforming its format into one suitable for wildignore, and then set
             " that option
@@ -101,11 +97,13 @@
             Plugin 'christoomey/vim-tmux-navigator'
             Plugin 'luochen1990/rainbow'
             Plugin 'tpope/vim-endwise'
+            Plugin 'plasticboy/vim-markdown'
         endif
 
     " Javascript
         if count(g:two_ret_bundle_groups, 'javascript')
             Plugin 'elzr/vim-json'
+            Plugin 'leafgarland/typescript-vim'
         endif
 
     " Ruby
