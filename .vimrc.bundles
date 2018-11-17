@@ -71,8 +71,6 @@
             Plugin 'roman/golden-ratio'
             Plugin 'sheerun/vim-polyglot'
             Plugin 'tacahiroy/ctrlp-funky'
-            " Plugin 'mg979/vim-visual-multi'
-            " Plugin 'terryma/vim-multiple-cursors'
             Plugin 'tpope/vim-commentary'
             Plugin 'tpope/vim-surround'
             " read your .gitignore file from the directory where you launch vim and parse
@@ -88,11 +86,7 @@
               Plugin 'majutsushi/tagbar'
               let g:deoplete#enable_at_startup = 1
             endif
-            if has('nvim')
-              Plugin 'Shougo/deoplete.nvim'
-            else
-              Plugin 'Shougo/neocomplete.vim.git'
-            endif
+            Plugin 'Shougo/deoplete.nvim'
             Plugin 'airblade/vim-gitgutter'
             Plugin 'christoomey/vim-tmux-navigator'
             Plugin 'luochen1990/rainbow'
